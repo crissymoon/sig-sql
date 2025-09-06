@@ -1,0 +1,31 @@
+Quadratic Formula: x = (-b ± √(b²-4ac)) / 2a
+Distance Formula: d = √((x₂-x₁)² + (y₂-y₁)²)
+Pythagorean Theorem: a² + b² = c²
+Area of Circle: A = πr²
+Circumference: C = 2πr
+Area of Triangle: A = ½bh
+Volume of Sphere: V = (4/3)πr³
+Surface Area of Sphere: A = 4πr²
+Law of Cosines: c² = a² + b² - 2ab·cos(C)
+Law of Sines: a/sin(A) = b/sin(B) = c/sin(C)
+Derivative Power Rule: d/dx(xⁿ) = n·xⁿ⁻¹
+Integral Power Rule: ∫xⁿdx = xⁿ⁺¹/(n+1) + C
+Chain Rule: d/dx[f(g(x))] = f'(g(x))·g'(x)
+Product Rule: d/dx[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)
+Quotient Rule: d/dx[f(x)/g(x)] = [f'(x)g(x) - f(x)g'(x)]/[g(x)]²
+Fundamental Theorem of Calculus: d/dx[∫ᵃˣf(t)dt] = f(x)
+Logarithm Properties: log(ab) = log(a) + log(b)
+Exponential Properties: aᵐ·aⁿ = aᵐ⁺ⁿ
+Binomial Theorem: (a+b)ⁿ = Σ(k=0 to n) C(n,k)·aⁿ⁻ᵏ·bᵏ
+Fibonacci Sequence: F(n) = F(n-1) + F(n-2)
+Prime Number Theorem: π(x) ≈ x/ln(x)
+Euler's Formula: e^(iπ) + 1 = 0
+Taylor Series: f(x) = Σ(n=0 to ∞) [f⁽ⁿ⁾(a)/n!]·(x-a)ⁿ
+Matrix Multiplication: (AB)ᵢⱼ = Σₖ AᵢₖBₖⱼ
+Determinant 2x2: det(A) = ad - bc
+Standard Deviation: σ = √[Σ(x-μ)²/N]
+Normal Distribution: f(x) = (1/σ√(2π))·e^(-½((x-μ)/σ)²)
+Bayes' Theorem: P(A|B) = P(B|A)·P(A)/P(B)
+Permutations: P(n,r) = n!/(n-r)!
+Combinations: C(n,r) = n!/(r!(n-r)!)
+Golden Ratio: φ = (1+√5)/2 ≈ 1.618

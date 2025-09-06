@@ -130,59 +130,96 @@ def validate_name(name: str) -> bool:
 
 def evaluate_storage_backend(data: Dict[str, Any]) -> str:
     sql_layers = [
-        {'weight': 1.5, 'bias': 0.0},
-        {'weight': 1.2, 'bias': 0.1}
+        {'weight': 1.8, 'bias': 0.2},
+        {'weight': 1.4, 'bias': 0.1}
     ]
     nosql_layers = [
-        {'weight': 2.0, 'bias': 0.3},
-        {'weight': 1.4, 'bias': -0.1},
-        {'weight': 1.1, 'bias': 0.2}
+        {'weight': 2.1, 'bias': 0.3},
+        {'weight': 1.7, 'bias': 0.2},
+        {'weight': 1.4, 'bias': 0.1}
     ]
     secure_layers = [
-        {'weight': 2.5, 'bias': 0.4},
-        {'weight': 1.6, 'bias': 0.0}
+        {'weight': 1.6, 'bias': 0.1},
+        {'weight': 1.3, 'bias': 0.0}
     ]
     jill_layers = [
-        {'weight': 1.8, 'bias': 0.2},
-        {'weight': 1.3, 'bias': 0.1}
+        {'weight': 1.7, 'bias': 0.15},
+        {'weight': 1.3, 'bias': 0.05}
     ]
     jeans_layers = [
-        {'weight': 1.0, 'bias': 0.0}
+        {'weight': 1.4, 'bias': 0.0}
     ]
     
     scores = {}
     
-    has_sensitive = any(key.lower() in ['password', 'secret', 'token', 'key', 'pass'] for key in data.keys())
+    has_sensitive = any(key.lower() in ['password', 'secret', 'token', 'key', 'pass', 'pwd'] for key in data.keys())
     has_complex_structure = any(isinstance(val, (dict, list)) for val in data.values())
     data_size = len(str(data))
     mixed_types = len(set(type(val).__name__ for val in data.values()))
+    num_fields = len(data)
     
-    if has_sensitive:
-        scores['secure'] = multi_layer_sigmoid(4.5, secure_layers)
-        scores['jill'] = multi_layer_sigmoid(3.8, jill_layers)
-    else:
-        scores['secure'] = multi_layer_sigmoid(1.0, secure_layers)
-        scores['jill'] = multi_layer_sigmoid(2.0, jill_layers)
-    
+    # SQL: Best for structured, relational data with multiple fields
+    sql_score = 3.0
+    if num_fields > 3 and not has_complex_structure and mixed_types <= 3:
+        sql_score += 3.0
+    if mixed_types <= 2 and num_fields > 1:
+        sql_score += 2.0
+    if data_size > 200 and not has_complex_structure:
+        sql_score += 1.5
     if has_complex_structure:
-        scores['nosql'] = multi_layer_sigmoid(4.0, nosql_layers)
-        scores['sql'] = multi_layer_sigmoid(1.5, sql_layers)
-    else:
-        scores['nosql'] = multi_layer_sigmoid(2.5, nosql_layers)
-        scores['sql'] = multi_layer_sigmoid(3.5, sql_layers)
+        sql_score -= 2.0
+    if has_sensitive:
+        sql_score += 0.5
     
-    if data_size < 500 and mixed_types <= 2:
-        scores['jeans'] = multi_layer_sigmoid(3.0, jeans_layers)
-    else:
-        scores['jeans'] = multi_layer_sigmoid(1.5, jeans_layers)
-    
+    # NoSQL: Best for complex, nested, or highly varied data
+    nosql_score = 3.0
+    if has_complex_structure:
+        nosql_score += 5.0
     if mixed_types > 3:
-        scores['nosql'] = multi_layer_sigmoid(scores.get('nosql', 0) * 1.2, nosql_layers)
-        scores['jill'] = multi_layer_sigmoid(scores.get('jill', 0) * 1.1, jill_layers)
+        nosql_score += 3.0
+    if num_fields > 5:
+        nosql_score += 1.5
+    if data_size > 300:
+        nosql_score += 1.0
+    if not has_complex_structure and mixed_types <= 2:
+        nosql_score -= 1.0
     
-    if data_size > 1000:
-        scores['sql'] = multi_layer_sigmoid(scores.get('sql', 0) * 1.3, sql_layers)
-        scores['nosql'] = multi_layer_sigmoid(scores.get('nosql', 0) * 1.2, nosql_layers)
+    # Secure: Best for sensitive data only
+    secure_score = 3.0
+    if has_sensitive:
+        secure_score += 5.0
+    else:
+        secure_score -= 2.0
+    
+    # Jill: Good for file-like data with moderate complexity
+    jill_score = 3.0
+    if has_sensitive and not has_complex_structure:
+        jill_score += 2.0
+    if num_fields <= 5 and data_size < 500:
+        jill_score += 1.5
+    if mixed_types <= 3 and num_fields > 1:
+        jill_score += 1.0
+    if has_complex_structure:
+        jill_score -= 0.5
+    
+    # Jeans: Best only for very simple, single-field data
+    jeans_score = 3.0
+    if num_fields == 1 and data_size < 50 and mixed_types == 1:
+        jeans_score += 3.0
+    else:
+        jeans_score -= 2.0
+        if num_fields > 2:
+            jeans_score -= 1.5
+        if has_complex_structure:
+            jeans_score -= 2.5
+        if has_sensitive:
+            jeans_score -= 2.0
+    
+    scores['sql'] = multi_layer_sigmoid(sql_score, sql_layers)
+    scores['nosql'] = multi_layer_sigmoid(nosql_score, nosql_layers)
+    scores['secure'] = multi_layer_sigmoid(secure_score, secure_layers)
+    scores['jill'] = multi_layer_sigmoid(jill_score, jill_layers)
+    scores['jeans'] = multi_layer_sigmoid(jeans_score, jeans_layers)
     
     best_backend = max(scores.items(), key=lambda x: x[1])
     return best_backend[0], scores
@@ -777,23 +814,38 @@ def demo_integrated_features():
     test_data = [5, "apple", 3.14, "banana", 1, "zebra", 2.7]
     print(f"Original data: {test_data}")
     
-    sorted_data = any_sort(test_data)
-    print(f"Sorted with any_sort: {sorted_data}")
+    try:
+        sorted_data = any_sort(test_data)
+        print(f"Sorted with any_sort: {sorted_data}")
+    except Exception as e:
+        print(f"Error in any_sort: {e}")
     
-    search_target = "apple"
-    linear_result = linear_search(test_data, search_target)
-    binary_result = binary_search(test_data, search_target)
-    print(f"Linear search for '{search_target}': {linear_result}")
-    print(f"Binary search for '{search_target}': {binary_result}")
+    try:
+        search_target = "apple"
+        linear_result = linear_search(test_data, search_target)
+        binary_result = binary_search(test_data, search_target)
+        print(f"Linear search for '{search_target}': {linear_result}")
+        print(f"Binary search for '{search_target}': {binary_result}")
+    except Exception as e:
+        print(f"Error in search: {e}")
     
-    test_record = add_record_with_unique_id("Demo", "Integrated test", test_data)
-    print(f"Added secure record: {test_record['id']}")
+    try:
+        test_record = add_record_with_unique_id("Demo", "Integrated test", test_data)
+        print(f"Added secure record: {test_record['id']}")
+    except Exception as e:
+        print(f"Error in add_record_with_unique_id: {e}")
     
-    all_records = find_all_records()
-    print(f"Total secure records: {len(all_records)}")
+    try:
+        all_records = find_all_records()
+        print(f"Total secure records: {len(all_records)}")
+    except Exception as e:
+        print(f"Error in find_all_records: {e}")
     
-    confidence_scores = deep_confidence_analysis("test@example.com")
-    print(f"Email confidence: {confidence_scores}")
+    try:
+        confidence_scores = deep_confidence_analysis("test@example.com")
+        print(f"Email confidence: {confidence_scores}")
+    except Exception as e:
+        print(f"Error in deep_confidence_analysis: {e}")
     
     print("Integrated features demo complete")
 

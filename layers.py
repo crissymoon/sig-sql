@@ -1,4 +1,5 @@
 import re
+import math
 from typing import Dict, Any, List
 from sigmoid import sigmoid, multi_layer_sigmoid
 
@@ -22,6 +23,9 @@ PATTERNS = {k: re.compile(v) for k, v in {
 PATTERNS['boolean'] = re.compile(PATTERNS['boolean'].pattern, re.IGNORECASE)
 
 def calculate_entropy(text: str) -> float:
+    if not text:
+        return 0.0
+        
     char_counts = {}
     for char in text:
         char_counts[char] = char_counts.get(char, 0) + 1
@@ -30,7 +34,8 @@ def calculate_entropy(text: str) -> float:
     entropy = 0.0
     for count in char_counts.values():
         probability = count / length
-        entropy -= probability * (probability.bit_length() - 1) if probability > 0 else 0
+        if probability > 0:
+            entropy -= probability * math.log2(probability)
     
     return entropy
 

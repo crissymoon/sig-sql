@@ -250,6 +250,38 @@ def run_app():
             else: print("Well butter my biscuit, that command ain't ringing any bells. Try again, sugar.")
         except Exception as e: print(e)
 
+def create_file_handler():
+    """Create a file handler interface for external use"""
+    class JeansHandler:
+        def __init__(self):
+            jeans_on()  # Load existing data
+        
+        def create_collection(self, name):
+            global all_lst, current_lst
+            all_lst[name] = []
+            current_lst = all_lst[name]
+            return True
+        
+        def add_item(self, collection_name, item):
+            global all_lst
+            if collection_name in all_lst:
+                all_lst[collection_name].append(item)
+                jeans_off()  # Save after each operation
+                return True
+            return False
+        
+        def get_collection(self, collection_name):
+            return all_lst.get(collection_name, [])
+        
+        def list_collections(self):
+            return list(all_lst.keys())
+        
+        def save(self):
+            jeans_off()
+            return True
+    
+    return JeansHandler()
+
 atexit.register(jeans_off)
 
 if __name__ == "__main__":
