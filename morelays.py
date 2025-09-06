@@ -6,6 +6,7 @@ import countries
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 from sigmoid import sigmoid, multi_layer_sigmoid
+from layers import deep_confidence_analysis
 from nosql_manager import NoSQLManager
 from jill import DataQueen
 from blu_jeans import create_file_handler as create_jeans_handler
@@ -29,59 +30,6 @@ PATTERNS = {k: re.compile(v) for k, v in {
 }.items()}
 PATTERNS['boolean'] = re.compile(PATTERNS['boolean'].pattern, re.IGNORECASE)
 _country_cache = {}
-
-def deep_confidence_analysis(the_input: Any, use_deep_layers: bool = True) -> Dict[str, float]:
-    if not isinstance(the_input, str):
-        return {"primary": 1.0}
-    
-    input_str = str(the_input).strip()
-    confidence_scores = {}
-    
-    if use_deep_layers:
-        email_layers = [
-            {'weight': 2.0, 'bias': 0.5},
-            {'weight': 1.5, 'bias': -0.2},
-            {'weight': 1.2, 'bias': 0.1}
-        ]
-        phone_layers = [
-            {'weight': 1.8, 'bias': 0.3},
-            {'weight': 1.4, 'bias': -0.1},
-            {'weight': 1.1, 'bias': 0.2}
-        ]
-        country_layers = [
-            {'weight': 2.2, 'bias': 0.4},
-            {'weight': 1.3, 'bias': 0.0}
-        ]
-        boolean_layers = [
-            {'weight': 3.0, 'bias': 0.2},
-            {'weight': 1.6, 'bias': -0.3}
-        ]
-    else:
-        email_layers = [{'weight': 1.0, 'bias': 0.0}]
-        phone_layers = [{'weight': 1.0, 'bias': 0.0}]
-        country_layers = [{'weight': 1.0, 'bias': 0.0}]
-        boolean_layers = [{'weight': 1.0, 'bias': 0.0}]
-    
-    if PATTERNS['boolean'].match(input_str):
-        confidence_scores['boolean'] = multi_layer_sigmoid(5.0, boolean_layers)
-    
-    if normalize_country_code(input_str):
-        confidence_scores['country'] = multi_layer_sigmoid(4.0, country_layers)
-    
-    phone_formatted = format_phone_number(input_str)
-    if phone_formatted:
-        confidence_scores['phone'] = multi_layer_sigmoid(4.5, phone_layers)
-    
-    if PATTERNS['email'].match(input_str):
-        confidence_scores['email'] = multi_layer_sigmoid(4.5, email_layers)
-    
-    if PATTERNS['date'].match(input_str):
-        confidence_scores['date'] = multi_layer_sigmoid(3.0, [{'weight': 1.5, 'bias': 0.1}])
-    
-    if not confidence_scores:
-        confidence_scores['text'] = multi_layer_sigmoid(1.0, [{'weight': 0.8, 'bias': 0.0}])
-    
-    return confidence_scores
 
 def format_phone_number(phone_str: str) -> Optional[str]:
     if not isinstance(phone_str, str):
@@ -130,7 +78,7 @@ def detect_type(the_input: Any) -> str:
         return {bool: "BOOLEAN", int: "INTEGER", float: "REAL"}[type(the_input)]
     
     if isinstance(the_input, str):
-        confidence_scores = calculate_type_confidence(the_input)
+        confidence_scores = deep_confidence_analysis(the_input, use_deep_layers=True)
         
         if 'boolean' in confidence_scores and confidence_scores['boolean'] > 0.8:
             return "BOOLEAN"
@@ -141,7 +89,14 @@ def detect_type(the_input: Any) -> str:
             'phone': "TEXT NOT NULL",
             'email': "TEXT UNIQUE", 
             'date': "DATE",
-            'country': "TEXT"
+            'country': "TEXT",
+            'url': "TEXT",
+            'ipv4': "TEXT",
+            'uuid': "TEXT",
+            'credit_card': "TEXT",
+            'ssn': "TEXT",
+            'currency': "REAL",
+            'time': "TEXT"
         }
         
         for pattern_type, sql_type in type_mappings.items():
@@ -151,7 +106,7 @@ def detect_type(the_input: Any) -> str:
     return "TEXT"
 
 def suggest_improvements(the_input: str) -> Optional[str]:
-    confidence_scores = calculate_type_confidence(the_input)
+    confidence_scores = deep_confidence_analysis(the_input, use_deep_layers=True)
     max_confidence = max(confidence_scores.values()) if confidence_scores else 0
     
     if max_confidence < 0.5:
@@ -642,7 +597,7 @@ def interactive_table_creator():
                 except ValueError:
                     pass
         
-        confidence_scores = calculate_type_confidence(sample_value)
+        confidence_scores = deep_confidence_analysis(sample_value, use_deep_layers=True, field_name=col_name)
         if confidence_scores:
             max_type = max(confidence_scores.items(), key=lambda x: x[1])
             print(f"Detected type confidence: {max_type[0]} ({max_type[1]:.2f})")
@@ -837,7 +792,7 @@ def demo_integrated_features():
     all_records = find_all_records()
     print(f"Total secure records: {len(all_records)}")
     
-    confidence_scores = calculate_type_confidence("test@example.com")
+    confidence_scores = deep_confidence_analysis("test@example.com")
     print(f"Email confidence: {confidence_scores}")
     
     print("Integrated features demo complete")
