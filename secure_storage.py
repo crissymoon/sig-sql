@@ -7,13 +7,13 @@ import shutil
 import glob
 from datetime import datetime
 from cryptography.hazmat.primitives import hashes, serialization, constant_time
-from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives.asymmetric import ec, rsa
 from cryptography.hazmat.primitives.ciphers.aead import ChaCha20Poly1305
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.backends import default_backend
 
 class SecureStorage:
-    def __init__(self, filename="secure_data.enc"):
+    def __init__(self, filename="temp_secure_data.db"):
         self.filename = filename
         self.backup_dir = "backups"
         self.backend = default_backend()
@@ -44,37 +44,19 @@ class SecureStorage:
             shutil.copy2(self.filename, backup_filename)
             self._manage_backups()
     
-    def _generate_or_load_keys(self):
-        private_key_file = "private_key.pem"
-        public_key_file = "public_key.pem"
-        
-        if os.path.exists(private_key_file) and os.path.exists(public_key_file):
-            with open("key_password.bin", 'rb') as f:
-                password = f.read()
-            with open(private_key_file, 'rb') as f:
-                self.private_key = serialization.load_pem_private_key(f.read(), password=password, backend=self.backend)
-            with open(public_key_file, 'rb') as f:
-                self.public_key = serialization.load_pem_public_key(f.read(), backend=self.backend)
-        else:
-            self.private_key = ec.generate_private_key(ec.SECP521R1(), self.backend)
+    def _ensure_keys(self):
+        # Generate runtime keys - never save to disk
+        if not hasattr(self, 'private_key') or self.private_key is None:
+            password = os.urandom(32)  # Generate random password each session
+            
+            # Generate keys in memory only
+            self.private_key = rsa.generate_private_key(
+                public_exponent=65537,
+                key_size=2048,
+                backend=default_backend()
+            )
             self.public_key = self.private_key.public_key()
-            
-            password = secrets.token_bytes(32)
-            with open(private_key_file, 'wb') as f:
-                f.write(self.private_key.private_bytes(
-                    encoding=serialization.Encoding.PEM,
-                    format=serialization.PrivateFormat.PKCS8,
-                    encryption_algorithm=serialization.BestAvailableEncryption(password)
-                ))
-            
-            with open("key_password.bin", 'wb') as f:
-                f.write(password)
-            
-            with open(public_key_file, 'wb') as f:
-                f.write(self.public_key.public_bytes(
-                    encoding=serialization.Encoding.PEM,
-                    format=serialization.PublicFormat.SubjectPublicKeyInfo
-                ))
+            self.key_password = password
     
     def _derive_key(self, shared_key, salt=None):
         if salt is None:
