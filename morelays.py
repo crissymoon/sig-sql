@@ -128,7 +128,7 @@ def suggest_improvements(the_input: str) -> Optional[str]:
 def validate_name(name: str) -> bool:
     return bool(name and isinstance(name, str) and name.replace('_', '').isalnum() and not name[0].isdigit() and len(name) <= 64)
 
-def evaluate_storage_backend(data: Dict[str, Any]) -> str:
+def evaluate_storage_backend(data: Dict[str, Any], domain: str = 'general') -> str:
     sql_layers = [
         {'weight': 1.8, 'bias': 0.2},
         {'weight': 1.4, 'bias': 0.1}
@@ -158,6 +158,16 @@ def evaluate_storage_backend(data: Dict[str, Any]) -> str:
     mixed_types = len(set(type(val).__name__ for val in data.values()))
     num_fields = len(data)
     
+    # Domain-specific adjustments
+    domain_factor = {
+        'business': {'sql': 2.0, 'jill': 1.5, 'secure': 1.0},
+        'medical': {'secure': 3.0, 'sql': 1.5, 'jill': 1.0},
+        'financial': {'secure': 2.5, 'sql': 2.0, 'jill': 1.5},
+        'education': {'sql': 1.5, 'nosql': 1.0, 'jill': 1.0},
+        'technology': {'nosql': 2.0, 'sql': 1.5, 'jill': 1.0},
+        'general': {'sql': 1.0, 'nosql': 1.0, 'secure': 1.0, 'jill': 1.0, 'jeans': 1.0}
+    }.get(domain, {'sql': 1.0, 'nosql': 1.0, 'secure': 1.0, 'jill': 1.0, 'jeans': 1.0})
+    
     # SQL: Best for structured, relational data with multiple fields
     sql_score = 3.0
     if num_fields > 3 and not has_complex_structure and mixed_types <= 3:
@@ -170,6 +180,7 @@ def evaluate_storage_backend(data: Dict[str, Any]) -> str:
         sql_score -= 2.0
     if has_sensitive:
         sql_score += 0.5
+    sql_score *= domain_factor.get('sql', 1.0)
     
     # NoSQL: Best for complex, nested, or highly varied data
     nosql_score = 3.0
@@ -183,15 +194,19 @@ def evaluate_storage_backend(data: Dict[str, Any]) -> str:
         nosql_score += 1.0
     if not has_complex_structure and mixed_types <= 2:
         nosql_score -= 1.0
+    nosql_score *= domain_factor.get('nosql', 1.0)
     
-    # Secure: Best for sensitive data only
+    # Secure: Best for sensitive data, enhanced for medical/financial domains
     secure_score = 3.0
     if has_sensitive:
         secure_score += 5.0
     else:
         secure_score -= 2.0
+    if domain in ['medical', 'financial']:
+        secure_score += 2.0
+    secure_score *= domain_factor.get('secure', 1.0)
     
-    # Jill: Good for file-like data with moderate complexity
+    # Jill: Good for file-like data with moderate complexity, enhanced for business
     jill_score = 3.0
     if has_sensitive and not has_complex_structure:
         jill_score += 2.0
@@ -201,6 +216,9 @@ def evaluate_storage_backend(data: Dict[str, Any]) -> str:
         jill_score += 1.0
     if has_complex_structure:
         jill_score -= 0.5
+    if domain == 'business':
+        jill_score += 1.5
+    jill_score *= domain_factor.get('jill', 1.0)
     
     # Jeans: Best only for very simple, single-field data
     jeans_score = 3.0
@@ -214,6 +232,7 @@ def evaluate_storage_backend(data: Dict[str, Any]) -> str:
             jeans_score -= 2.5
         if has_sensitive:
             jeans_score -= 2.0
+    jeans_score *= domain_factor.get('jeans', 1.0)
     
     scores['sql'] = multi_layer_sigmoid(sql_score, sql_layers)
     scores['nosql'] = multi_layer_sigmoid(nosql_score, nosql_layers)

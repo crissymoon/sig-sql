@@ -1,0 +1,155 @@
+payroll
+salary
+wage
+hourly
+overtime
+benefits
+compensation
+earnings
+income
+gross pay
+net pay
+deductions
+taxes
+withholding
+social security
+medicare
+health insurance
+dental insurance
+vision insurance
+retirement
+401k
+pension
+vacation days
+sick leave
+personal time off
+pto
+holiday pay
+bonus
+commission
+allowance
+expense reimbursement
+mileage
+travel expenses
+employee
+staff
+worker
+personnel
+team member
+contractor
+freelancer
+temporary
+part time
+full time
+manager
+supervisor
+director
+executive
+administrator
+analyst
+specialist
+coordinator
+assistant
+clerk
+representative
+technician
+engineer
+developer
+designer
+consultant
+trainer
+instructor
+recruiter
+hr
+human resources
+payroll department
+accounting
+finance
+timesheet
+time card
+clock in
+clock out
+work schedule
+shift
+hours worked
+regular hours
+overtime hours
+break time
+lunch break
+start time
+end time
+weekly
+biweekly
+monthly
+quarterly
+annual
+yearly
+department
+division
+office
+location
+remote work
+telecommute
+work from home
+performance review
+evaluation
+raise
+promotion
+disciplinary action
+termination
+resignation
+new hire
+onboarding
+training
+certification
+skills
+qualifications
+experience
+education
+background check
+reference
+interview
+job posting
+recruitment
+hiring
+employment contract
+offer letter
+non disclosure agreement
+nda
+confidentiality
+workplace policy
+safety training
+compliance
+audit
+report
+documentation
+record keeping
+database
+system
+software
+application
+platform
+integration
+automation
+processing
+calculation
+total
+sum
+amount
+cost
+budget
+forecast
+estimate
+invoice
+receipt
+transaction
+payment
+direct deposit
+check
+cash
+credit
+debit
+bank account
+routing number
+account number
+financial institution

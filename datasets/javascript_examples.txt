@@ -1,0 +1,187 @@
+function basicMathOperations(a, b) {
+    return {
+        addition: a + b,
+        subtraction: a - b,
+        multiplication: a * b,
+        division: b !== 0 ? a / b : 'Division by zero',
+        modulus: a % b,
+        exponentiation: Math.pow(a, b)
+    };
+}
+
+function advancedMathOperations(num) {
+    return {
+        square: num * num,
+        cube: num * num * num,
+        squareRoot: Math.sqrt(num),
+        cubeRoot: Math.cbrt(num),
+        absolute: Math.abs(num),
+        ceiling: Math.ceil(num),
+        floor: Math.floor(num),
+        round: Math.round(num),
+        sine: Math.sin(num),
+        cosine: Math.cos(num),
+        tangent: Math.tan(num),
+        logarithm: Math.log(num),
+        naturalLog: Math.log(num),
+        log10: Math.log10(num)
+    };
+}
+
+function arrayMathOperations(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return 'Invalid array';
+    }
+    
+    const sum = arr.reduce((acc, num) => acc + num, 0);
+    const product = arr.reduce((acc, num) => acc * num, 1);
+    const average = sum / arr.length;
+    const max = Math.max(...arr);
+    const min = Math.min(...arr);
+    
+    return {
+        sum: sum,
+        product: product,
+        average: average,
+        maximum: max,
+        minimum: min,
+        count: arr.length
+    };
+}
+
+function factorial(n) {
+    if (n < 0) return 'Invalid input';
+    if (n === 0 || n === 1) return 1;
+    return n * factorial(n - 1);
+}
+
+function fibonacci(n) {
+    if (n < 0) return 'Invalid input';
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+function isPrime(num) {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+function gcd(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+function lcm(a, b) {
+    return Math.abs(a * b) / gcd(a, b);
+}
+
+function degreeToRadian(degree) {
+    return degree * (Math.PI / 180);
+}
+
+function radianToDegree(radian) {
+    return radian * (180 / Math.PI);
+}
+
+function quadraticFormula(a, b, c) {
+    const discriminant = b * b - 4 * a * c;
+    if (discriminant < 0) {
+        return 'No real solutions';
+    } else if (discriminant === 0) {
+        return [-b / (2 * a)];
+    } else {
+        const sqrt = Math.sqrt(discriminant);
+        return [(-b + sqrt) / (2 * a), (-b - sqrt) / (2 * a)];
+    }
+}
+
+function areaCalculations() {
+    return {
+        circle: (radius) => Math.PI * radius * radius,
+        rectangle: (length, width) => length * width,
+        triangle: (base, height) => 0.5 * base * height,
+        square: (side) => side * side,
+        trapezoid: (base1, base2, height) => 0.5 * (base1 + base2) * height
+    };
+}
+
+function volumeCalculations() {
+    return {
+        sphere: (radius) => (4/3) * Math.PI * Math.pow(radius, 3),
+        cylinder: (radius, height) => Math.PI * radius * radius * height,
+        cube: (side) => Math.pow(side, 3),
+        cone: (radius, height) => (1/3) * Math.PI * radius * radius * height,
+        pyramid: (baseArea, height) => (1/3) * baseArea * height
+    };
+}
+
+function statisticalOperations(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        return 'Invalid array';
+    }
+    
+    const sorted = [...arr].sort((a, b) => a - b);
+    const sum = arr.reduce((acc, num) => acc + num, 0);
+    const mean = sum / arr.length;
+    
+    const median = arr.length % 2 === 0 
+        ? (sorted[arr.length / 2 - 1] + sorted[arr.length / 2]) / 2
+        : sorted[Math.floor(arr.length / 2)];
+    
+    const variance = arr.reduce((acc, num) => acc + Math.pow(num - mean, 2), 0) / arr.length;
+    const standardDeviation = Math.sqrt(variance);
+    
+    return {
+        mean: mean,
+        median: median,
+        mode: findMode(arr),
+        variance: variance,
+        standardDeviation: standardDeviation,
+        range: Math.max(...arr) - Math.min(...arr)
+    };
+}
+
+function findMode(arr) {
+    const frequency = {};
+    let maxFreq = 0;
+    let modes = [];
+    
+    for (let num of arr) {
+        frequency[num] = (frequency[num] || 0) + 1;
+        if (frequency[num] > maxFreq) {
+            maxFreq = frequency[num];
+        }
+    }
+    
+    for (let num in frequency) {
+        if (frequency[num] === maxFreq) {
+            modes.push(Number(num));
+        }
+    }
+    
+    return modes.length === arr.length ? 'No mode' : modes;
+}
+
+function randomNumberGenerator() {
+    return {
+        randomFloat: () => Math.random(),
+        randomInt: (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
+        randomFromArray: (arr) => arr[Math.floor(Math.random() * arr.length)],
+        shuffle: (arr) => {
+            const shuffled = [...arr];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+    };
+}

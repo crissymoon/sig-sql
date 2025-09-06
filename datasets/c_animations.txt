@@ -1,0 +1,269 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+
+// Matrix Rain Animation
+void matrix_rain() {
+    char matrix[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    int cols = 80, rows = 24;
+    
+    for (int i = 0; i < 100; i++) {
+        system("clear");
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                if (rand() % 10 == 0) {
+                    printf("\033[32m%c\033[0m", matrix[rand() % strlen(matrix)]);
+                } else {
+                    printf(" ");
+                }
+            }
+            printf("\n");
+        }
+        usleep(100000);
+    }
+}
+
+// Spinning Loading Animation
+void spinning_loader() {
+    char spinner[] = "|/-\\";
+    printf("Loading ");
+    
+    for (int i = 0; i < 50; i++) {
+        printf("\b%c", spinner[i % 4]);
+        fflush(stdout);
+        usleep(200000);
+    }
+    printf("\b Done!\n");
+}
+
+// Wave Animation
+void wave_animation() {
+    char wave[] = "~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^~^";
+    
+    for (int i = 0; i < 20; i++) {
+        system("clear");
+        printf("\n\n\n\n");
+        for (int j = 0; j < i; j++) printf(" ");
+        printf("\033[34m%s\033[0m\n", wave);
+        usleep(300000);
+    }
+}
+
+// Bouncing Ball Animation
+void bouncing_ball() {
+    int width = 40, height = 10;
+    int x = 0, y = 0;
+    int dx = 1, dy = 1;
+    
+    for (int frame = 0; frame < 100; frame++) {
+        system("clear");
+        
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                if (row == y && col == x) {
+                    printf("\033[31mO\033[0m");
+                } else {
+                    printf(" ");
+                }
+            }
+            printf("|\n");
+        }
+        
+        for (int i = 0; i < width; i++) printf("-");
+        printf("\n");
+        
+        x += dx;
+        y += dy;
+        
+        if (x <= 0 || x >= width - 1) dx = -dx;
+        if (y <= 0 || y >= height - 1) dy = -dy;
+        
+        usleep(150000);
+    }
+}
+
+// Progress Bar Animation
+void progress_bar() {
+    int width = 50;
+    printf("Processing: [");
+    
+    for (int i = 0; i <= width; i++) {
+        printf("\r");
+        printf("Processing: [");
+        
+        for (int j = 0; j < i; j++) {
+            printf("\033[32m#\033[0m");
+        }
+        for (int j = i; j < width; j++) {
+            printf(" ");
+        }
+        
+        printf("] %d%%", (i * 100) / width);
+        fflush(stdout);
+        usleep(100000);
+    }
+    printf("\n");
+}
+
+// Fire Animation
+void fire_animation() {
+    char fire_chars[] = " .':^\"*";
+    int width = 60, height = 15;
+    
+    for (int frame = 0; frame < 50; frame++) {
+        system("clear");
+        
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                int intensity = rand() % 7;
+                if (row > height - 5) {
+                    intensity = rand() % 4 + 3;
+                }
+                printf("\033[%dm%c\033[0m", 
+                       31 + (intensity > 4 ? 1 : 0), 
+                       fire_chars[intensity]);
+            }
+            printf("\n");
+        }
+        usleep(200000);
+    }
+}
+
+// Snake Animation
+void snake_animation() {
+    int snake_x[100], snake_y[100];
+    int length = 5;
+    int direction = 0; // 0=right, 1=down, 2=left, 3=up
+    int width = 30, height = 15;
+    
+    // Initialize snake
+    for (int i = 0; i < length; i++) {
+        snake_x[i] = 5 - i;
+        snake_y[i] = 5;
+    }
+    
+    for (int frame = 0; frame < 100; frame++) {
+        system("clear");
+        
+        // Draw border
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                int is_snake = 0;
+                for (int i = 0; i < length; i++) {
+                    if (snake_x[i] == col && snake_y[i] == row) {
+                        printf(i == 0 ? "\033[32mO\033[0m" : "\033[32mo\033[0m");
+                        is_snake = 1;
+                        break;
+                    }
+                }
+                if (!is_snake) {
+                    if (row == 0 || row == height-1 || col == 0 || col == width-1) {
+                        printf("#");
+                    } else {
+                        printf(" ");
+                    }
+                }
+            }
+            printf("\n");
+        }
+        
+        // Move snake
+        for (int i = length - 1; i > 0; i--) {
+            snake_x[i] = snake_x[i-1];
+            snake_y[i] = snake_y[i-1];
+        }
+        
+        switch (direction) {
+            case 0: snake_x[0]++; break;
+            case 1: snake_y[0]++; break;
+            case 2: snake_x[0]--; break;
+            case 3: snake_y[0]--; break;
+        }
+        
+        // Change direction randomly
+        if (rand() % 10 == 0) {
+            direction = (direction + 1) % 4;
+        }
+        
+        // Boundary check
+        if (snake_x[0] <= 1) direction = 0;
+        if (snake_x[0] >= width-2) direction = 2;
+        if (snake_y[0] <= 1) direction = 1;
+        if (snake_y[0] >= height-2) direction = 3;
+        
+        usleep(300000);
+    }
+}
+
+// Starfield Animation
+void starfield() {
+    typedef struct {
+        float x, y, z;
+    } Star;
+    
+    Star stars[100];
+    int width = 80, height = 24;
+    
+    // Initialize stars
+    for (int i = 0; i < 100; i++) {
+        stars[i].x = (rand() % 1000 - 500) / 10.0;
+        stars[i].y = (rand() % 1000 - 500) / 10.0;
+        stars[i].z = rand() % 100 + 1;
+    }
+    
+    for (int frame = 0; frame < 200; frame++) {
+        system("clear");
+        
+        for (int i = 0; i < 100; i++) {
+            stars[i].z -= 2;
+            if (stars[i].z <= 0) {
+                stars[i].x = (rand() % 1000 - 500) / 10.0;
+                stars[i].y = (rand() % 1000 - 500) / 10.0;
+                stars[i].z = 100;
+            }
+            
+            int screen_x = (int)(width/2 + stars[i].x / stars[i].z * 20);
+            int screen_y = (int)(height/2 + stars[i].y / stars[i].z * 20);
+            
+            if (screen_x >= 0 && screen_x < width && screen_y >= 0 && screen_y < height) {
+                printf("\033[%d;%dH*", screen_y + 1, screen_x + 1);
+            }
+        }
+        
+        usleep(100000);
+    }
+}
+
+int main() {
+    printf("Choose an animation:\n");
+    printf("1. Matrix Rain\n");
+    printf("2. Spinning Loader\n");
+    printf("3. Wave Animation\n");
+    printf("4. Bouncing Ball\n");
+    printf("5. Progress Bar\n");
+    printf("6. Fire Animation\n");
+    printf("7. Snake Animation\n");
+    printf("8. Starfield\n");
+    printf("Enter choice (1-8): ");
+    
+    int choice;
+    scanf("%d", &choice);
+    
+    switch(choice) {
+        case 1: matrix_rain(); break;
+        case 2: spinning_loader(); break;
+        case 3: wave_animation(); break;
+        case 4: bouncing_ball(); break;
+        case 5: progress_bar(); break;
+        case 6: fire_animation(); break;
+        case 7: snake_animation(); break;
+        case 8: starfield(); break;
+        default: printf("Invalid choice!\n");
+    }
+    
+    return 0;
+}
+
+// Compile with: gcc -o animation animation.c
+// Run with: ./animation

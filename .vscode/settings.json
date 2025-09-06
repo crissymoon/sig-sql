@@ -1,0 +1,66 @@
+{
+    "files.associations": {
+        "*.moon": "moon"
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true
+    },
+    "editor.tokenColorCustomizations": {
+        "[*]": {
+            "textMateRules": [
+                {
+                    "scope": "keyword.control.moon",
+                    "settings": {
+                        "fontStyle": "italic",
+                        "foreground": "#ff79c6"
+                    }
+                },
+                {
+                    "scope": "keyword.other.moon",
+                    "settings": {
+                        "fontStyle": "italic",
+                        "foreground": "#bd93f9"
+                    }
+                },
+                {
+                    "scope": "variable.other.moon",
+                    "settings": {
+                        "foreground": "#ff79c6"
+                    }
+                },
+                {
+                    "scope": "string.quoted.multiline.moon",
+                    "settings": {
+                        "foreground": "#f1fa8c"
+                    }
+                },
+                {
+                    "scope": "string.quoted.double.moon",
+                    "settings": {
+                        "foreground": "#f1fa8c"
+                    }
+                },
+                {
+                    "scope": "markup.underline.link.moon",
+                    "settings": {
+                        "foreground": "#8be9fd",
+                        "fontStyle": "italic"
+                    }
+                },
+                {
+                    "scope": "comment.line.hash.moon, comment.line.arrow.moon, comment.line.section.moon, comment.block.moon",
+                    "settings": {
+                        "foreground": "#ff5555",
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "constant.numeric.moon",
+                    "settings": {
+                        "foreground": "#bd93f9"
+                    }
+                }
+            ]
+        }
+    }
+}

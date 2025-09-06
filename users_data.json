@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "email": "alice@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "email": "bob@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "email": "charlie@example.com"
+    },
+    {
+      "id": 4,
+      "name": "Diana",
+      "email": "diana@example.com"
+    }
+  ],
+  "metadata": {
+    "created": "2025-09-06T13:22:47.086161",
+    "version": "1.0",
+    "total_users": 4,
+    "updated": "2025-09-06T13:22:47.087819"
+  }
+}

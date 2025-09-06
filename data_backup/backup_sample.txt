@@ -1,0 +1,5 @@
+Hello, World!
+This is a sample file.
+Created on: 2025-09-06 13:22:47
+This line was appended.
+Python file I/O is powerful!

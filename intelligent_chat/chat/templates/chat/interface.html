@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intelligent Chat System</title>
+        <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f0f2f5; height: 100vh; display: flex; flex-direction: column; }
+        
+        .header { background: #6c757d; color: white; padding: 15px 20px; text-align: center; }
+        .header h1 { font-size: 24px; margin-bottom: 5px; }
+        .header p { font-size: 14px; opacity: 0.9; }
+        
+        .main-container { flex: 1; display: flex; max-width: 1400px; margin: 0 auto; width: 100%; }
+        
+        .chat-panel { flex: 2; background: white; display: flex; flex-direction: column; border-right: 1px solid #ddd; }
+        
+        .chat-messages { flex: 1; padding: 20px; overflow-y: auto; min-height: 400px; }
+        
+        .chat-input-area { padding: 20px; border-top: 1px solid #ddd; background: #fafafa; }
+        .input-group { margin-bottom: 15px; }
+        .input-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        .input-group input { width: 100%; padding: 12px; border: 1px solid #ddd; font-size: 14px; }
+        .input-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; font-size: 14px; min-height: 80px; resize: vertical; }
+        
+        .button-group { display: flex; gap: 10px; margin-top: 15px; }
+        .btn { padding: 12px 24px; border: none; font-size: 14px; cursor: pointer; font-weight: bold; }
+        .btn-primary { background: #6c757d; color: white; }
+        .btn-primary:hover { background: #5a6268; }
+        .btn-secondary { background: #8b0000; color: white; }
+        .btn-secondary:hover { background: #660000; }
+        
+        .sidebar { flex: 1; background: white; padding: 20px; overflow-y: auto; }
+        .sidebar h3 { margin-bottom: 15px; color: #333; font-size: 18px; }
+        
+        .message { margin-bottom: 20px; padding: 15px; max-width: 100%; }
+        .message.user { background: #6c757d; color: white; margin-left: 20%; }
+        .message.bot { background: #e4e6ea; color: #333; margin-right: 20%; }
+        .message-header { font-size: 12px; opacity: 0.8; margin-bottom: 8px; }
+        .message-content { line-height: 1.4; }
+        
+        .storage-card { background: #f8f9fa; border: 1px solid #e9ecef; padding: 15px; margin: 15px 0; }
+        .storage-card h4 { color: #495057; margin-bottom: 8px; }
+        .storage-card p { color: #6c757d; margin-bottom: 10px; }
+        .confidence { font-weight: bold; color: #6c757d; font-size: 16px; }
+        .features { font-size: 13px; color: #6c757d; margin: 8px 0; }
+        
+        .feedback-section { margin-top: 15px; padding-top: 15px; border-top: 1px solid #dee2e6; }
+        .rating-buttons { display: flex; gap: 5px; margin: 10px 0; flex-wrap: wrap; }
+        .rating-btn { background: #6c757d; color: white; border: none; padding: 8px 12px; cursor: pointer; font-size: 12px; }
+        .rating-btn:hover { background: #5a6268; }
+        .rating-btn.selected { background: #8b0000; }
+        
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .stat-item { background: #f8f9fa; padding: 15px; text-align: center; border: 1px solid #e9ecef; }
+        .stat-value { font-size: 20px; font-weight: bold; color: #495057; display: block; }
+        .stat-label { font-size: 12px; color: #6c757d; margin-top: 5px; }
+        
+        .weight-display { font-family: 'Courier New', monospace; font-size: 11px; background: #f8f9fa; padding: 12px; margin-top: 10px; border: 1px solid #e9ecef; }
+        
+        .empty-state { text-align: center; color: #6c757d; padding: 40px; }
+        .empty-state h3 { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Intelligent Chat System</h1>
+        <p>Real-time learning storage recommendations</p>
+    </div>
+    
+    <div class="main-container">
+        <div class="chat-panel">
+            <div class="chat-messages" id="chatMessages">
+                <div class="empty-state">
+                    <h3>Start a conversation</h3>
+                    <p>Enter your query and data below to begin analysis</p>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <div class="input-group">
+                    <label for="userInput">Your Message</label>
+                    <input type="text" id="userInput" placeholder="Enter your request or question">
+                </div>
+                
+                <div class="input-group">
+                    <label for="dataContent">Data Content</label>
+                    <textarea id="dataContent" placeholder="Paste your data here (SQL, code, JSON, text, etc.)"></textarea>
+                </div>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="processInput()">Send Message</button>
+                    <button class="btn btn-secondary" onclick="clearInputs()">Clear</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3>Session Statistics</h3>
+            <div id="stats" class="stats-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        let sessionId = null;
+        let lastInteractionId = null;
+        
+        function generateSessionId() {
+            return 'session_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+        }
+        
+        function processInput() {
+            const userInput = document.getElementById('userInput').value.trim();
+            const dataContent = document.getElementById('dataContent').value.trim();
+            
+            if (!userInput || !dataContent) {
+                alert('Please enter both user query and data content');
+                return;
+            }
+            
+            if (!sessionId) {
+                sessionId = generateSessionId();
+            }
+            
+            const payload = {
+                user_input: userInput,
+                data_content: dataContent,
+                session_id: sessionId
+            };
+            
+            fetch('/api/process/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    displayError(data.error);
+                } else {
+                    displayResults(data);
+                    lastInteractionId = data.interaction_id;
+                    updateStats();
+                }
+            })
+            .catch(error => {
+                displayError('Network error: ' + error.message);
+            });
+        }
+        
+        function displayResults(data) {
+            const chatMessages = document.getElementById('chatMessages');
+            
+            if (chatMessages.querySelector('.empty-state')) {
+                chatMessages.innerHTML = '';
+            }
+            
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.innerHTML = `
+                <div class="message-header">You</div>
+                <div class="message-content">${document.getElementById('userInput').value}</div>
+            `;
+            chatMessages.appendChild(userMessage);
+            
+            const botMessage = document.createElement('div');
+            botMessage.className = 'message bot';
+            botMessage.innerHTML = `
+                <div class="message-header">AI Assistant</div>
+                <div class="message-content">${data.chat_response}</div>
+            `;
+            chatMessages.appendChild(botMessage);
+            
+            const recommendation = data.storage_recommendation;
+            const storageCard = document.createElement('div');
+            storageCard.className = 'storage-card';
+            storageCard.innerHTML = `
+                <h4>${recommendation.name}</h4>
+                <p>${recommendation.description}</p>
+                <div class="confidence">Confidence: ${recommendation.confidence}</div>
+                <div class="features">
+                    <strong>Features:</strong> ${recommendation.features.join(', ')}<br>
+                    <strong>Processing Time:</strong> ${(data.processing_time * 1000).toFixed(1)}ms<br>
+                    <strong>Should Learn:</strong> ${data.should_learn ? 'Yes' : 'No'}
+                </div>
+                
+                <div class="feedback-section">
+                    <strong>Rate this recommendation (1-10):</strong>
+                    <div class="rating-buttons">
+                        ${[1,2,3,4,5,6,7,8,9,10].map(num => 
+                            `<button class="rating-btn" onclick="submitFeedback(${num})">${num}</button>`
+                        ).join('')}
+                    </div>
+                </div>
+                
+                <div class="weight-display">
+                    <strong>Learning Weights:</strong><br>
+                    ${Object.entries(data.weights).map(([key, value]) => 
+                        `${key}: ${value.toFixed(4)}`
+                    ).join('<br>')}
+                </div>
+            `;
+            chatMessages.appendChild(storageCard);
+            
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function submitFeedback(rating) {
+            if (!lastInteractionId || !sessionId) {
+                alert('No interaction to rate');
+                return;
+            }
+            
+            const payload = {
+                interaction_id: lastInteractionId,
+                satisfaction_rating: rating,
+                session_id: sessionId
+            };
+            
+            fetch('/api/feedback/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    document.querySelectorAll('.rating-btn').forEach(btn => {
+                        btn.classList.remove('selected');
+                        if (btn.textContent == rating) {
+                            btn.classList.add('selected');
+                        }
+                    });
+                    updateStats();
+                }
+            })
+            .catch(error => {
+                alert('Network error: ' + error.message);
+            });
+        }
+        
+        function updateStats() {
+            if (!sessionId) return;
+            
+            fetch(`/api/stats/${sessionId}/`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Stats error:', data.error);
+                } else {
+                    displayStats(data);
+                }
+            })
+            .catch(error => {
+                console.error('Stats network error:', error);
+            });
+        }
+        
+        function displayStats(data) {
+            const statsDiv = document.getElementById('stats');
+            
+            statsDiv.innerHTML = `
+                <div class="stat-item">
+                    <span class="stat-value">${data.total_interactions}</span>
+                    <div class="stat-label">Interactions</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">${data.success_rate}</span>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">${data.avg_satisfaction.toFixed(2)}</span>
+                    <div class="stat-label">Avg Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">${(data.avg_processing_time * 1000).toFixed(1)}ms</span>
+                    <div class="stat-label">Avg Processing</div>
+                </div>
+            `;
+            
+            if (data.storage_distribution && Object.keys(data.storage_distribution).length > 0) {
+                const distributionHtml = Object.entries(data.storage_distribution)
+                    .map(([type, count]) => `${type.replace('_', ' ')}: ${count}`)
+                    .join('<br>');
+                
+                statsDiv.innerHTML += `
+                    <div class="stat-item" style="grid-column: span 2;">
+                        <div style="font-size: 11px; line-height: 1.4;">${distributionHtml}</div>
+                        <div class="stat-label">Storage Distribution</div>
+                    </div>
+                `;
+            }
+        }
+        
+        function displayError(error) {
+            const chatMessages = document.getElementById('chatMessages');
+            
+            if (chatMessages.querySelector('.empty-state')) {
+                chatMessages.innerHTML = '';
+            }
+            
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'message bot';
+            errorMessage.innerHTML = `
+                <div class="message-header">System Error</div>
+                <div class="message-content" style="color: #dc3545;">Error: ${error}</div>
+            `;
+            chatMessages.appendChild(errorMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        
+        function clearInputs() {
+            document.getElementById('userInput').value = '';
+            document.getElementById('dataContent').value = '';
+            document.getElementById('results').innerHTML = '';
+        }
+        
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+        
+        window.onload = function() {
+            updateStats();
+        };
+    </script>
+</body>
+</html>

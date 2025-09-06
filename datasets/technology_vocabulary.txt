@@ -1,0 +1,219 @@
+database
+table
+column
+row
+record
+field
+primary key
+foreign key
+index
+constraint
+query
+select
+insert
+update
+delete
+create
+drop
+alter
+join
+inner join
+left join
+right join
+outer join
+where
+group by
+order by
+having
+distinct
+count
+sum
+avg
+max
+min
+union
+subquery
+stored procedure
+function
+trigger
+view
+schema
+transaction
+commit
+rollback
+acid
+normalization
+denormalization
+entity
+relationship
+one to one
+one to many
+many to many
+sql
+nosql
+mongodb
+mysql
+postgresql
+sqlite
+oracle
+sql server
+cassandra
+redis
+elasticsearch
+json
+xml
+csv
+api
+rest
+graphql
+endpoint
+http
+https
+get
+post
+put
+patch
+delete
+authentication
+authorization
+token
+jwt
+oauth
+session
+cookie
+cache
+performance
+optimization
+backup
+restore
+migration
+replication
+sharding
+scaling
+load balancing
+clustering
+distributed
+microservices
+architecture
+design pattern
+mvc
+orm
+framework
+library
+dependency
+package
+module
+import
+export
+class
+object
+method
+function
+variable
+constant
+parameter
+argument
+return
+exception
+error
+try
+catch
+finally
+debug
+test
+unit test
+integration test
+logging
+monitoring
+deployment
+production
+staging
+development
+environment
+configuration
+security
+encryption
+hashing
+validation
+sanitization
+injection
+xss
+csrf
+cors
+version control
+git
+repository
+branch
+merge
+commit
+pull request
+continuous integration
+ci cd
+docker
+container
+kubernetes
+cloud
+aws
+azure
+gcp
+serverless
+lambda
+programming
+coding
+development
+software
+application
+system
+platform
+technology
+algorithm
+data structure
+array
+list
+dictionary
+hash table
+tree
+graph
+sorting
+searching
+recursion
+iteration
+complexity
+big o
+time complexity
+space complexity
+frontend
+backend
+full stack
+web development
+mobile development
+javascript
+python
+java
+c++
+c#
+php
+ruby
+go
+rust
+swift
+kotlin
+react
+angular
+vue
+node.js
+express
+django
+flask
+spring
+laravel
+tensorflow
+pytorch
+machine learning
+artificial intelligence
+data science
+analytics
+statistics
+visualization
+reporting
+dashboard

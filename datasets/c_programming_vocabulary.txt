@@ -1,0 +1,235 @@
+printf
+scanf
+malloc
+free
+sizeof
+include
+define
+typedef
+struct
+union
+enum
+const
+static
+extern
+volatile
+register
+auto
+inline
+void
+char
+int
+float
+double
+long
+short
+unsigned
+signed
+if
+else
+switch
+case
+default
+for
+while
+do
+break
+continue
+return
+goto
+function
+pointer
+array
+string
+memory
+allocation
+deallocation
+heap
+stack
+recursion
+iteration
+loop
+condition
+variable
+constant
+parameter
+argument
+compilation
+preprocessing
+linking
+debugging
+optimization
+performance
+algorithm
+data structure
+linked list
+binary tree
+hash table
+queue
+stack
+graph
+sorting
+searching
+file handling
+input output
+stream
+buffer
+format specifier
+escape sequence
+header file
+library
+standard library
+math library
+string library
+time library
+stdlib
+stdio
+string.h
+math.h
+time.h
+ctype.h
+limits.h
+float.h
+stddef.h
+stdarg.h
+setjmp.h
+signal.h
+assert.h
+errno.h
+locale.h
+makefile
+compiler
+gcc
+clang
+preprocessor
+directive
+macro
+conditional compilation
+bit manipulation
+bitwise operators
+logical operators
+arithmetic operators
+assignment operators
+comparison operators
+increment
+decrement
+address operator
+dereference operator
+member access
+pointer arithmetic
+dynamic memory
+static memory
+memory leak
+buffer overflow
+segmentation fault
+null pointer
+dangling pointer
+memory management
+error handling
+exception handling
+bounds checking
+type casting
+implicit conversion
+explicit conversion
+function pointer
+callback function
+variadic function
+recursion depth
+tail recursion
+memoization
+dynamic programming
+greedy algorithm
+divide and conquer
+time complexity
+space complexity
+big o notation
+optimization techniques
+code refactoring
+modular programming
+structured programming
+procedural programming
+object oriented concepts
+encapsulation simulation
+abstraction layers
+interface design
+api design
+library creation
+header guards
+namespace simulation
+error codes
+return values
+status indicators
+validation
+input sanitization
+bounds checking
+defensive programming
+code documentation
+commenting style
+naming conventions
+coding standards
+best practices
+performance profiling
+memory profiling
+debugging techniques
+unit testing
+integration testing
+version control
+git workflow
+continuous integration
+cross platform
+portability
+compatibility
+standards compliance
+ansi c
+c99
+c11
+c18
+compiler flags
+optimization levels
+warning flags
+debugging symbols
+static analysis
+dynamic analysis
+code coverage
+profiling tools
+valgrind
+gdb
+make
+cmake
+autotools
+package management
+dependency management
+build systems
+cross compilation
+embedded systems
+real time systems
+system programming
+kernel development
+device drivers
+interrupt handling
+concurrency
+multithreading
+process management
+inter process communication
+shared memory
+semaphores
+mutexes
+atomic operations
+synchronization
+race conditions
+deadlock prevention
+thread safety
+parallel programming
+distributed computing
+network programming
+socket programming
+tcp udp
+http protocols
+web development
+database connectivity
+file systems
+operating systems
+linux programming
+windows programming
+unix programming
+posix compliance

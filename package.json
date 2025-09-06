@@ -1,0 +1,29 @@
+{
+  "name": "typescript-recursion-examples",
+  "version": "1.0.0",
+  "description": "Comprehensive TypeScript recursion examples with type safety",
+  "main": "js_recursion_examples.js",
+  "scripts": {
+    "start": "node js_recursion_examples.js",
+    "start:ts": "npx ts-node typescript_recursion_examples.ts",
+    "compile": "tsc typescript_recursion_examples.ts",
+    "compile:watch": "tsc --watch typescript_recursion_examples.ts",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only typescript_recursion_examples.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.13",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  },
+  "keywords": [
+    "typescript",
+    "recursion",
+    "algorithms",
+    "examples",
+    "tutorial"
+  ],
+  "author": "Assistant",
+  "license": "MIT"
+}
