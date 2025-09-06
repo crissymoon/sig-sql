@@ -173,6 +173,136 @@ def suggest_improvements(the_input: str) -> Optional[str]:
 def validate_name(name: str) -> bool:
     return bool(name and isinstance(name, str) and name.replace('_', '').isalnum() and not name[0].isdigit() and len(name) <= 64)
 
+def evaluate_storage_backend(data: Dict[str, Any]) -> str:
+    sql_layers = [
+        {'weight': 1.5, 'bias': 0.0},
+        {'weight': 1.2, 'bias': 0.1}
+    ]
+    nosql_layers = [
+        {'weight': 2.0, 'bias': 0.3},
+        {'weight': 1.4, 'bias': -0.1},
+        {'weight': 1.1, 'bias': 0.2}
+    ]
+    secure_layers = [
+        {'weight': 2.5, 'bias': 0.4},
+        {'weight': 1.6, 'bias': 0.0}
+    ]
+    jill_layers = [
+        {'weight': 1.8, 'bias': 0.2},
+        {'weight': 1.3, 'bias': 0.1}
+    ]
+    jeans_layers = [
+        {'weight': 1.0, 'bias': 0.0}
+    ]
+    
+    scores = {}
+    
+    has_sensitive = any(key.lower() in ['password', 'secret', 'token', 'key', 'pass'] for key in data.keys())
+    has_complex_structure = any(isinstance(val, (dict, list)) for val in data.values())
+    data_size = len(str(data))
+    mixed_types = len(set(type(val).__name__ for val in data.values()))
+    
+    if has_sensitive:
+        scores['secure'] = multi_layer_sigmoid(4.5, secure_layers)
+        scores['jill'] = multi_layer_sigmoid(3.8, jill_layers)
+    else:
+        scores['secure'] = multi_layer_sigmoid(1.0, secure_layers)
+        scores['jill'] = multi_layer_sigmoid(2.0, jill_layers)
+    
+    if has_complex_structure:
+        scores['nosql'] = multi_layer_sigmoid(4.0, nosql_layers)
+        scores['sql'] = multi_layer_sigmoid(1.5, sql_layers)
+    else:
+        scores['nosql'] = multi_layer_sigmoid(2.5, nosql_layers)
+        scores['sql'] = multi_layer_sigmoid(3.5, sql_layers)
+    
+    if data_size < 500 and mixed_types <= 2:
+        scores['jeans'] = multi_layer_sigmoid(3.0, jeans_layers)
+    else:
+        scores['jeans'] = multi_layer_sigmoid(1.5, jeans_layers)
+    
+    if mixed_types > 3:
+        scores['nosql'] = multi_layer_sigmoid(scores.get('nosql', 0) * 1.2, nosql_layers)
+        scores['jill'] = multi_layer_sigmoid(scores.get('jill', 0) * 1.1, jill_layers)
+    
+    if data_size > 1000:
+        scores['sql'] = multi_layer_sigmoid(scores.get('sql', 0) * 1.3, sql_layers)
+        scores['nosql'] = multi_layer_sigmoid(scores.get('nosql', 0) * 1.2, nosql_layers)
+    
+    best_backend = max(scores.items(), key=lambda x: x[1])
+    return best_backend[0], scores
+
+def auto_select_storage():
+    global USE_NOSQL, USE_SECURE_STORAGE, USE_JILL_STORAGE, nosql_manager, jill_manager, jeans_handler
+    
+    print("Enter sample data for storage backend evaluation:")
+    data = {}
+    
+    while True:
+        key = input("Field name (or 'done' to finish): ").strip()
+        if key.lower() == 'done':
+            break
+        if not key:
+            continue
+            
+        value = input(f"Value for {key}: ").strip()
+        
+        try:
+            if value.lower() in ['true', 'false']:
+                data[key] = value.lower() == 'true'
+            elif value.isdigit():
+                data[key] = int(value)
+            elif '.' in value and value.replace('.', '').replace('-', '').isdigit():
+                data[key] = float(value)
+            else:
+                data[key] = value
+        except:
+            data[key] = value
+    
+    if not data:
+        print("No data provided for evaluation")
+        return
+    
+    recommended_backend, scores = evaluate_storage_backend(data)
+    
+    print(f"\nStorage Backend Evaluation Results:")
+    print(f"Data analyzed: {data}")
+    print(f"Backend confidence scores:")
+    for backend, score in sorted(scores.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {backend.capitalize()}: {score:.3f} ({score*100:.1f}%)")
+    
+    print(f"\nRecommended backend: {recommended_backend.upper()}")
+    
+    confirm = input(f"Switch to {recommended_backend} storage? (y/n): ").strip().lower()
+    if confirm == 'y':
+        USE_NOSQL = USE_SECURE_STORAGE = USE_JILL_STORAGE = False
+        
+        if nosql_manager:
+            nosql_manager.close()
+            nosql_manager = None
+        
+        if recommended_backend == 'nosql':
+            nosql_manager = NoSQLManager()
+            if nosql_manager.is_connected():
+                USE_NOSQL = True
+                print("Switched to NoSQL mode")
+            else:
+                print("Failed to connect to MongoDB")
+        elif recommended_backend == 'secure':
+            USE_SECURE_STORAGE = True
+            print("Switched to Secure Storage mode")
+        elif recommended_backend == 'jill':
+            if not jill_manager:
+                jill_manager = DataQueen(auto_delimiter_choice=3, encryption_method='2')
+            USE_JILL_STORAGE = True
+            print("Switched to Jill Storage mode")
+        elif recommended_backend == 'jeans':
+            if not jeans_handler:
+                jeans_handler = create_jeans_handler()
+            print("Switched to Jeans Storage mode")
+        else:
+            print("Switched to SQL mode")
+
 def toggle_storage_mode():
     global USE_NOSQL, USE_SECURE_STORAGE, USE_JILL_STORAGE, nosql_manager, jill_manager, jeans_handler
     
@@ -182,8 +312,9 @@ def toggle_storage_mode():
     print("3. Secure Storage (Encrypted)")
     print("4. Jill Storage (DataQueen)")
     print("5. Jeans Storage (List-based)")
+    print("6. Auto-select based on data")
     
-    choice = input("Select storage mode (1-5): ").strip()
+    choice = input("Select storage mode (1-6): ").strip()
     
     USE_NOSQL = USE_SECURE_STORAGE = USE_JILL_STORAGE = False
     
@@ -211,6 +342,9 @@ def toggle_storage_mode():
         if not jeans_handler:
             jeans_handler = create_jeans_handler()
         print("Switched to Jeans Storage mode")
+    elif choice == '6':
+        auto_select_storage()
+        return
     else:
         print("Switched to SQL mode")
 
@@ -655,13 +789,14 @@ def main():
         '7': sigmoid_demo,
         '8': toggle_storage_mode,
         '9': lambda: demo_integrated_features(),
-        '10': lambda: (print("Later!"), sys.exit())
+        '10': auto_select_storage,
+        '11': lambda: (print("Later!"), sys.exit())
     }
     
     menu_items = [
         "Create table", "List tables", "Show table contents", "Insert record", 
         "Query records", "Drop table", "Multi-layer sigmoid demo", 
-        "Toggle storage mode", "Demo integrated features", "Exit"
+        "Toggle storage mode", "Demo integrated features", "Auto-select storage", "Exit"
     ]
     
     while True:
