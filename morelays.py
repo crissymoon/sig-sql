@@ -3,8 +3,8 @@ import sqlite3
 import re
 import sys
 import countries
-import math
 from typing import List, Dict, Any, Optional
+from sigmoid import sigmoid, multi_layer_sigmoid
 
 DB_NAME = "cis261_db.db"
 PATTERNS = {k: re.compile(v) for k, v in {
@@ -16,21 +16,6 @@ PATTERNS = {k: re.compile(v) for k, v in {
 }.items()}
 PATTERNS['boolean'] = re.compile(PATTERNS['boolean'].pattern, re.IGNORECASE)
 _country_cache = {}
-
-def sigmoid(x: float) -> float:
-    try:
-        clamped_x = max(-500, min(500, x))
-        return 1 / (1 + math.exp(-clamped_x))
-    except (OverflowError, ValueError, ZeroDivisionError):
-        return 0.0 if x < 0 else 1.0
-
-def multi_layer_sigmoid(x: float, layers: List[Dict[str, float]]) -> float:
-    current_value = x
-    for layer in layers:
-        weight = layer.get('weight', 1.0)
-        bias = layer.get('bias', 0.0)
-        current_value = sigmoid(current_value * weight + bias)
-    return current_value
 
 def deep_confidence_analysis(the_input: Any, use_deep_layers: bool = True) -> Dict[str, float]:
     if not isinstance(the_input, str):
