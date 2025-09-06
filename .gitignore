@@ -6,3 +6,32 @@ __pycache__/
 .Python
 *.db
 .DS_Store
+
+# Sensitive files - SECURITY CRITICAL
+private_key.pem
+public_key.pem
+key_password.bin
+secure_data.enc
+*.enc
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Backup files with potentially sensitive data
+backups/
+backup/
+
+# Database files that might contain sensitive data
+*.sqlite
+*.sqlite3
+smart_cli.db
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Session and temporary files
+knowledge_base.pkl
+*.log
