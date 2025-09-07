@@ -1,6 +1,6 @@
 Coding Requirements:
 
-1. Compliance with Standards: Adherence to the following standards is mandatory. The use of emojis, extraneous commentary, and supplementary documentation files is strictly prohibited.
+1. Compliance with Standards: Adherence to the following standards is mandatory. The use of emojis, extraneous commentary, and supplementary documentation files is strictly prohibited. (The Primary Documentation will be finalized within a system for note-taking, journaling, and advanced collaboration.)
 
 2. Development Methodology: A systematic development methodology shall be employed, prioritizing meticulous refinement processes and the resolution of existing errors to ensure optimal functionality.
 
@@ -34,41 +34,11 @@ Coding Requirements:
 
 17. Generative Response Sourcing: All generative responses must be derived from training data and datasets, processed by specific algorithmic coding; static, precomposed responses are not permitted.
 
-18. Do not completely re-create files, fix the errors at hand!!!!
+18. Avoid entirely recreating files; instead, address the specific errors identified.
+
+19. Responses must be generated directly from the datasets. Static responses are not permitted; do not produce simulated or fabricated outputs. If the necessary data is unavailable, respond with: "This data has not been trained yet."
+
+20. Our focus should be on reviewing the datasets and restructuring them for user accessibility.
 
 --
-
-Request(s)/Task(s) needed while following these requirements at all times:
-
-You: give a recursion example in python
-
-Processing...
-AI: Greetings and welcome! Every conversation teaches me something new about how people think and approach topics. [conversation_patterns-132]
-
-============================================================
-Response: Greetings and welcome! Every conversation teaches me something new about how people think and approa...
-Sentiment: neutral (confidence: 0.40)
-Complexity: 0.30
-Business Weight: 0.00
-Technical Weight: 0.00
-Academic Weight: 0.00
-Uniqueness ID: 306
-Processing Time: 0.001s
-Test ID: test_2_1757203132
-
---- REQUEST ANALYSIS ---
-Intent: conversation_starter | Domain: technical | Complexity: medium
-Confidence: 0.10 | Approach: conversational_engagement
-Datasets Used: conversation_patterns, language_processing
-
---- PATTERN GENERATION ---
-Source Datasets: conversation_patterns, language_processing
-Primary Dataset: conversation_patterns (relevance: 0.50)
-Generated Patterns: 6 from 2 datasets
-Uniqueness Factors: temporal_132, complexity_medium, domain_technical
-✓ SUCCESS - Generated response with enhanced dataset pattern analysis
-============================================================
-You: 
-
-
 
