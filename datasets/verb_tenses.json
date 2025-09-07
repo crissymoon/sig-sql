@@ -1,0 +1,20 @@
+{
+  "present": {
+    "simple": "I work every day.",
+    "continuous": "I am working right now.",
+    "perfect": "I have worked here for five years.",
+    "perfect_continuous": "I have been working since morning."
+  },
+  "past": {
+    "simple": "I worked yesterday.",
+    "continuous": "I was working when you called.",
+    "perfect": "I had worked before you arrived.",
+    "perfect_continuous": "I had been working for hours."
+  },
+  "future": {
+    "simple": "I will work tomorrow.",
+    "continuous": "I will be working at 3 PM.",
+    "perfect": "I will have worked by then.",
+    "perfect_continuous": "I will have been working for 10 hours."
+  }
+}

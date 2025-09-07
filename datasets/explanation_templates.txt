@@ -1,0 +1,10 @@
+A {concept} is a {definition} that {purpose}
+To {action}, you need to {steps} because {reason}
+The difference between {item1} and {item2} is that {explanation}
+When {condition}, the system {behavior} which {result}
+You can {achieve_goal} by {method} and {additional_step}
+{Technology} works by {mechanism} to {outcome}
+The main advantage of {approach} is {benefit}
+Common problems with {system} include {issues}
+Best practices for {domain} involve {practices}
+To troubleshoot {problem}, first {step1}, then {step2}

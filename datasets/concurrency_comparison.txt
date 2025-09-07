@@ -1,0 +1,9 @@
+Zig: Async/await with event loops
+Rust: async/await with futures and tokio
+Go: Goroutines and channels
+Zig: Suspending and resuming functions
+Rust: Send/Sync traits for thread safety
+Go: Share memory by communicating
+Zig: Comptime async frame allocation
+Rust: Zero-cost abstractions for async
+Go: M:N threading model with scheduler

@@ -1,0 +1,35 @@
+REST
+GraphQL
+SOAP
+gRPC
+WebSocket
+Server-Sent Events
+JSON-RPC
+XML-RPC
+OData
+JSON API
+HAL
+Siren
+Collection+JSON
+Ion
+OpenAPI
+Swagger
+RAML
+API Blueprint
+Postman
+Insomnia
+HTTP
+HTTPS
+TCP
+UDP
+WebRTC
+MQTT
+AMQP
+Kafka
+RabbitMQ
+Redis Pub/Sub
+Apache Pulsar
+NATS
+ZeroMQ
+Socket.IO
+SignalR

@@ -1,0 +1,27 @@
+fn main() { }
+let mut variable = value;
+let variable: Type = value;
+match expression { pattern => result, _ => default }
+if let Some(value) = option { }
+while let Some(item) = iterator.next() { }
+for item in collection { }
+impl Trait for Type { }
+struct Name { field: Type }
+enum Name { Variant(Type) }
+fn function(param: Type) -> ReturnType { }
+use std::collections::HashMap;
+mod module_name;
+pub struct PublicStruct;
+#[derive(Debug, Clone)]
+Result<T, E>
+Option<T>
+Box<dyn Trait>
+Arc<Mutex<T>>
+async fn async_function() -> Result<(), Error> { }
+let result = function().await?;
+|| { /* closure */ }
+|param| param + 1
+vec![1, 2, 3]
+HashMap::new()
+&str vs String
+unsafe { /* unsafe code */ }

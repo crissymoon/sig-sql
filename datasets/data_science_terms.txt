@@ -1,0 +1,38 @@
+Machine Learning
+Deep Learning
+Neural Network
+Algorithm
+Model
+Training
+Testing
+Validation
+Cross Validation
+Overfitting
+Underfitting
+Bias
+Variance
+Feature Engineering
+Data Mining
+Big Data
+Analytics
+Statistics
+Probability
+Regression
+Classification
+Clustering
+Dimensionality Reduction
+PCA
+t-SNE
+Random Forest
+Support Vector Machine
+K-Means
+DBSCAN
+Gradient Descent
+Backpropagation
+Convolutional Neural Network
+Recurrent Neural Network
+LSTM
+GRU
+Transformer
+Attention Mechanism
+Transfer Learning

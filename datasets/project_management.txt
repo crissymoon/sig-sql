@@ -1,0 +1,52 @@
+Agile
+Scrum
+Kanban
+Waterfall
+Sprint
+Backlog
+User Story
+Epic
+Feature
+Task
+Subtask
+Story Points
+Velocity
+Burndown
+Burnup
+Retrospective
+Daily Standup
+Sprint Planning
+Sprint Review
+Product Owner
+Scrum Master
+Development Team
+Stakeholder
+Customer
+Requirements
+Specification
+Acceptance Criteria
+Definition of Done
+Minimum Viable Product
+Release
+Deployment
+Go Live
+Rollback
+Hotfix
+Patch
+Version
+Milestone
+Deadline
+Timeline
+Roadmap
+Risk
+Issue
+Dependency
+Blocker
+Technical Debt
+Refactoring
+Code Review
+Pull Request
+Merge
+Branch
+Tag
+Release Notes

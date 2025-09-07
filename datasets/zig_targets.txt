@@ -1,0 +1,15 @@
+x86_64-linux-gnu
+x86_64-linux-musl
+x86_64-windows-gnu
+x86_64-macos
+aarch64-linux-gnu
+aarch64-macos
+arm-linux-gnueabihf
+i386-linux-gnu
+i386-windows-gnu
+riscv64-linux-gnu
+wasm32-freestanding
+wasm32-wasi
+x86_64-freebsd
+x86_64-netbsd
+x86_64-openbsd

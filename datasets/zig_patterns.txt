@@ -1,0 +1,18 @@
+const allocator = std.heap.page_allocator;
+var list = std.ArrayList(i32).init(allocator);
+defer list.deinit();
+const result = try some_function();
+if (condition) |value| { }
+switch (value) { .tag => { }, else => { } }
+for (items) |item| { }
+while (condition) : (increment) { }
+const MyStruct = struct { field: i32 };
+const MyEnum = enum { variant_a, variant_b };
+pub fn main() !void { }
+test "example test" { }
+comptime var counter = 0;
+const array = [_]i32{1, 2, 3};
+const slice = array[0..2];
+errdefer allocator.free(memory);
+const optional: ?i32 = null;
+const error_union: !i32 = 42;

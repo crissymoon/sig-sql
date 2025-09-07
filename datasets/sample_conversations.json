@@ -1,0 +1,14 @@
+[
+  {
+    "user": "I'm getting a timeout error",
+    "assistant": "Timeout errors often occur due to network issues or incorrect connection parameters. Can you check your connection string and network connectivity?"
+  },
+  {
+    "user": "JWT tokens sound good",
+    "assistant": "Great choice! JWT tokens are secure and stateless. You'll need to generate a token on login and validate it on each request."
+  },
+  {
+    "user": "It's a web application and the database queries are slow",
+    "assistant": "Slow database queries are common performance bottlenecks. Have you checked if your queries are properly indexed?"
+  }
+]

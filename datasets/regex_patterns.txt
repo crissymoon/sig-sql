@@ -1,0 +1,10 @@
+Email: [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+Phone: \+?1?-?\(?\d{3}\)?-?\d{3}-?\d{4}
+URL: https?://[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}
+Date (MM/DD/YYYY): \d{1,2}/\d{1,2}/\d{4}
+Time (HH:MM): \d{1,2}:\d{2}
+Currency: \$\d+\.\d{2}
+Hashtag: #[a-zA-Z0-9_]+
+Mention: @[a-zA-Z0-9_]+
+Word boundaries: \b\w+\b
+Capitalized words: [A-Z][a-z]+

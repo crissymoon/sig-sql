@@ -1,0 +1,32 @@
+{
+  "assertives": [
+    "I believe that climate change is real.",
+    "The meeting is scheduled for tomorrow.",
+    "This book is very interesting.",
+    "He graduated from Harvard University."
+  ],
+  "directives": [
+    "Please close the door.",
+    "Could you help me with this?",
+    "Turn left at the next corner.",
+    "Don't forget to call me."
+  ],
+  "commissives": [
+    "I promise to be there on time.",
+    "I will help you with your project.",
+    "We guarantee your satisfaction.",
+    "I swear to tell the truth."
+  ],
+  "expressives": [
+    "Thank you for your help.",
+    "I'm sorry for being late.",
+    "Congratulations on your promotion!",
+    "I apologize for the inconvenience."
+  ],
+  "declarations": [
+    "I now pronounce you husband and wife.",
+    "The meeting is adjourned.",
+    "You're hired!",
+    "I declare this exhibition open."
+  ]
+}

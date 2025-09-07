@@ -1,0 +1,91 @@
+[
+  {
+    "status": "success",
+    "data": {
+      "users": [
+        {
+          "id": 1,
+          "first_name": "Sarah",
+          "last_name": "Rodriguez",
+          "email": "sarah.rodriguez@gmail.com",
+          "age": 34,
+          "department": "HR",
+          "salary": 40627,
+          "join_date": "2025-01-08",
+          "active": false
+        },
+        {
+          "id": 2,
+          "first_name": "Chris",
+          "last_name": "Garcia",
+          "email": "chris.garcia@yahoo.com",
+          "age": 43,
+          "department": "Engineering",
+          "salary": 53667,
+          "join_date": "2023-04-16",
+          "active": false
+        },
+        {
+          "id": 3,
+          "first_name": "David",
+          "last_name": "Davis",
+          "email": "david.davis@company.com",
+          "age": 51,
+          "department": "HR",
+          "salary": 141457,
+          "join_date": "2023-08-15",
+          "active": false
+        },
+        {
+          "id": 4,
+          "first_name": "David",
+          "last_name": "Davis",
+          "email": "david.davis@example.org",
+          "age": 51,
+          "department": "Marketing",
+          "salary": 108376,
+          "join_date": "2023-07-27",
+          "active": true
+        },
+        {
+          "id": 5,
+          "first_name": "Chris",
+          "last_name": "Miller",
+          "email": "chris.miller@gmail.com",
+          "age": 33,
+          "department": "Engineering",
+          "salary": 110948,
+          "join_date": "2024-04-17",
+          "active": false
+        }
+      ]
+    },
+    "message": "Users retrieved successfully",
+    "timestamp": "2025-09-06T14:03:41.300911"
+  },
+  {
+    "status": "error",
+    "error": {
+      "code": "VALIDATION_ERROR",
+      "message": "Invalid input parameters",
+      "details": [
+        "Email field is required",
+        "Age must be greater than 0"
+      ]
+    },
+    "timestamp": "2025-09-06T14:03:41.300923"
+  },
+  {
+    "status": "success",
+    "data": {
+      "total_sales": 125000.0,
+      "count": 50
+    },
+    "pagination": {
+      "page": 1,
+      "limit": 10,
+      "total_pages": 5
+    },
+    "timestamp": "2025-09-06T14:03:41.300928"
+  }
+]

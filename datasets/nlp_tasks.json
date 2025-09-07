@@ -1,0 +1,23 @@
+{
+  "text_preprocessing": [
+    "Tokenization: splitting text into words or subwords",
+    "Normalization: converting to lowercase, removing punctuation",
+    "Stopword removal: filtering out common words like 'the', 'and'",
+    "Stemming: reducing words to their root form",
+    "Lemmatization: reducing words to their dictionary form"
+  ],
+  "syntactic_analysis": [
+    "Part-of-speech tagging: identifying grammatical categories",
+    "Named entity recognition: identifying persons, places, organizations",
+    "Dependency parsing: identifying grammatical relationships",
+    "Constituency parsing: identifying phrase structure",
+    "Chunking: identifying noun phrases, verb phrases"
+  ],
+  "semantic_analysis": [
+    "Word sense disambiguation: determining word meaning in context",
+    "Semantic role labeling: identifying who did what to whom",
+    "Sentiment analysis: determining emotional tone",
+    "Topic modeling: identifying themes in text collections",
+    "Machine translation: converting between languages"
+  ]
+}

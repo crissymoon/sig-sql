@@ -1,0 +1,71 @@
+{
+  "indo_european": {
+    "germanic": [
+      "English",
+      "German",
+      "Dutch",
+      "Swedish",
+      "Norwegian"
+    ],
+    "romance": [
+      "Spanish",
+      "French",
+      "Italian",
+      "Portuguese",
+      "Romanian"
+    ],
+    "slavic": [
+      "Russian",
+      "Polish",
+      "Czech",
+      "Ukrainian",
+      "Bulgarian"
+    ],
+    "celtic": [
+      "Irish",
+      "Welsh",
+      "Scottish Gaelic",
+      "Breton"
+    ],
+    "indo_iranian": [
+      "Hindi",
+      "Persian",
+      "Kurdish",
+      "Bengali"
+    ]
+  },
+  "sino_tibetan": {
+    "chinese": [
+      "Mandarin",
+      "Cantonese",
+      "Wu",
+      "Min"
+    ],
+    "tibetan": [
+      "Tibetan",
+      "Dzongkha",
+      "Ladakhi"
+    ]
+  },
+  "afroasiatic": {
+    "semitic": [
+      "Arabic",
+      "Hebrew",
+      "Amharic",
+      "Tigrinya"
+    ],
+    "berber": [
+      "Tamazight",
+      "Kabyle",
+      "Tuareg"
+    ]
+  },
+  "niger_congo": {
+    "bantu": [
+      "Swahili",
+      "Zulu",
+      "Yoruba",
+      "Igbo"
+    ]
+  }
+}

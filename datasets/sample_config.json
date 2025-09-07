@@ -1,0 +1,33 @@
+{
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "app_db",
+    "username": "app_user",
+    "password": "secure_password",
+    "pool_size": 10,
+    "timeout": 30
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "password": null,
+    "ttl": 3600
+  },
+  "api": {
+    "port": 8080,
+    "host": "0.0.0.0",
+    "cors_origins": [
+      "*"
+    ],
+    "rate_limit": {
+      "requests": 1000,
+      "window": 3600
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "/var/log/app.log"
+  }
+}

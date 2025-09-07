@@ -1,0 +1,32 @@
+Visual Studio Code
+IntelliJ IDEA
+Eclipse
+Sublime Text
+Atom
+Vim
+Emacs
+Nano
+WebStorm
+PyCharm
+Android Studio
+Xcode
+Git
+GitHub
+GitLab
+Bitbucket
+SVN
+Mercurial
+Perforce
+Docker
+Kubernetes
+Jenkins
+Travis CI
+CircleCI
+GitHub Actions
+Ansible
+Terraform
+Vagrant
+Chef
+Puppet
+Helm
+Istio

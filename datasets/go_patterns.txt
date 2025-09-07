@@ -1,0 +1,14 @@
+Singleton pattern with sync.Once
+Factory pattern with constructors
+Builder pattern with method chaining
+Observer pattern with channels
+Worker pool pattern
+Pipeline pattern with channels
+Fan-in fan-out pattern
+Circuit breaker pattern
+Retry pattern with exponential backoff
+Context pattern for cancellation
+Middleware pattern for HTTP handlers
+Decorator pattern with function types
+Strategy pattern with interfaces
+Command pattern with function types

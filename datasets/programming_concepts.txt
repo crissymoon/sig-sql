@@ -1,0 +1,65 @@
+Variable
+Function
+Class
+Object
+Method
+Property
+Constructor
+Inheritance
+Polymorphism
+Encapsulation
+Abstraction
+Interface
+Abstract Class
+Static Method
+Instance Method
+Getter
+Setter
+Array
+List
+Dictionary
+Hash Table
+Set
+Stack
+Queue
+Tree
+Binary Tree
+Graph
+Linked List
+Hash Map
+Heap
+Priority Queue
+Algorithm
+Data Structure
+Recursion
+Iteration
+Loop
+Conditional
+Exception
+Error Handling
+Try Catch
+Finally
+Memory Management
+Garbage Collection
+Pointer
+Reference
+Value Type
+Reference Type
+Scope
+Closure
+Lambda
+Anonymous Function
+Higher Order Function
+Callback
+Promise
+Async
+Await
+Thread
+Process
+Concurrency
+Parallelism
+Synchronization
+Mutex
+Semaphore
+Deadlock
+Race Condition

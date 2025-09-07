@@ -1,0 +1,44 @@
+Unit Test
+Integration Test
+End-to-End Test
+Smoke Test
+Regression Test
+Performance Test
+Load Test
+Stress Test
+Security Test
+Usability Test
+Acceptance Test
+Black Box Testing
+White Box Testing
+Gray Box Testing
+Manual Testing
+Automated Testing
+Test Case
+Test Suite
+Test Plan
+Test Coverage
+Code Coverage
+Branch Coverage
+Statement Coverage
+Mock
+Stub
+Fake
+Spy
+Test Double
+Test Framework
+Assertion
+Test Runner
+Continuous Integration
+Continuous Deployment
+DevOps
+Test Driven Development
+Behavior Driven Development
+Acceptance Criteria
+Bug
+Defect
+Issue
+Ticket
+Debug
+Troubleshoot
+Root Cause Analysis

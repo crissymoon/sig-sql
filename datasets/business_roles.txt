@@ -1,0 +1,38 @@
+CEO
+CTO
+CFO
+COO
+CIO
+CISO
+VP
+Director
+Manager
+Senior Manager
+Team Lead
+Supervisor
+Coordinator
+Specialist
+Analyst
+Consultant
+Advisor
+Executive
+President
+Chairman
+Product Manager
+Project Manager
+Program Manager
+Scrum Master
+Business Analyst
+Data Analyst
+Financial Analyst
+Marketing Manager
+Sales Manager
+HR Manager
+Operations Manager
+Quality Assurance
+Developer
+Engineer
+Architect
+Designer
+Researcher
+Scientist

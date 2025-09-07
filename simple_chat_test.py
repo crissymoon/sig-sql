@@ -229,7 +229,7 @@ class SimpleChatHandler(BaseHTTPRequestHandler):
         
         return ". ".join(analysis_parts)
 
-def run_server(port=8004):
+def run_server(port=8005):
     server_address = ('', port)
     httpd = HTTPServer(server_address, SimpleChatHandler)
     print(f"Simple chat server running on http://localhost:{port}/chat")

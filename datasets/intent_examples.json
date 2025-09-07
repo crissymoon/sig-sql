@@ -1,0 +1,70 @@
+{
+  "greeting": [
+    "hello",
+    "hi",
+    "hey",
+    "good morning",
+    "good afternoon",
+    "good evening",
+    "howdy",
+    "what's up",
+    "how's it going",
+    "nice to see you"
+  ],
+  "goodbye": [
+    "goodbye",
+    "bye",
+    "see you later",
+    "farewell",
+    "take care",
+    "until next time",
+    "have a good day",
+    "catch you later",
+    "so long",
+    "adios"
+  ],
+  "help": [
+    "help me",
+    "I need help",
+    "can you help",
+    "assist me",
+    "support",
+    "I'm stuck",
+    "I don't know how",
+    "guide me",
+    "show me",
+    "explain"
+  ],
+  "information": [
+    "tell me about",
+    "what is",
+    "how does",
+    "explain",
+    "describe",
+    "I want to know",
+    "information about",
+    "details on",
+    "facts about"
+  ],
+  "complaint": [
+    "I'm not happy",
+    "this is wrong",
+    "there's a problem",
+    "I'm frustrated",
+    "this doesn't work",
+    "I'm disappointed",
+    "this is broken",
+    "error"
+  ],
+  "compliment": [
+    "great job",
+    "well done",
+    "excellent work",
+    "amazing",
+    "fantastic",
+    "I love this",
+    "this is perfect",
+    "outstanding",
+    "brilliant"
+  ]
+}

@@ -1,0 +1,28 @@
+Windows
+macOS
+Linux
+Ubuntu
+Debian
+CentOS
+Red Hat
+SUSE
+Fedora
+Mint
+Arch
+Manjaro
+Elementary
+Zorin
+FreeBSD
+OpenBSD
+NetBSD
+Solaris
+AIX
+HP-UX
+Android
+iOS
+Chrome OS
+Tizen
+watchOS
+tvOS
+iPadOS
+HarmonyOS

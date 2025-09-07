@@ -1,0 +1,9 @@
+Zig: Error unions (!Type) and try/catch
+Rust: Result<T, E> type and ? operator
+Go: Multiple return values with error type
+Zig: Explicit error handling required
+Rust: Compile-time error handling guarantees
+Go: Runtime error checking conventions
+Zig: Error sets for specific error types
+Rust: panic! for unrecoverable errors
+Go: panic and recover for exceptional cases

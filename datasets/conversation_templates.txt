@@ -1,0 +1,10 @@
+User asks about {topic}, Assistant explains {concept}
+User requests help with {task}, Assistant provides {solution}
+User expresses {emotion}, Assistant responds with {support}
+User mentions {problem}, Assistant suggests {fix}
+User wants to {action}, Assistant guides through {steps}
+User is confused about {subject}, Assistant clarifies {details}
+User complains about {issue}, Assistant offers {resolution}
+User compliments {feature}, Assistant acknowledges {feedback}
+User asks for {information}, Assistant provides {data}
+User needs {assistance}, Assistant offers {help}

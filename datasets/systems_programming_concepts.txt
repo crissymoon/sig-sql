@@ -1,0 +1,20 @@
+Memory allocation strategies
+Cache-friendly data structures
+SIMD instructions and vectorization
+Lock-free data structures
+Memory barriers and atomic operations
+Virtual memory management
+Process and thread scheduling
+Inter-process communication (IPC)
+System call interfaces
+File system operations
+Network socket programming
+Signal handling
+Dynamic linking and loading
+Profiling and performance analysis
+Cross-compilation techniques
+Embedded systems programming
+Real-time systems constraints
+Hardware abstraction layers
+Device driver development
+Kernel module programming

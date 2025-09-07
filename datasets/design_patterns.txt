@@ -1,0 +1,42 @@
+Singleton
+Factory
+Abstract Factory
+Builder
+Prototype
+Adapter
+Bridge
+Composite
+Decorator
+Facade
+Flyweight
+Proxy
+Chain of Responsibility
+Command
+Interpreter
+Iterator
+Mediator
+Memento
+Observer
+State
+Strategy
+Template Method
+Visitor
+Model-View-Controller
+Model-View-Presenter
+Model-View-ViewModel
+Repository
+Unit of Work
+Dependency Injection
+Inversion of Control
+Publish-Subscribe
+Event Sourcing
+CQRS
+Saga
+Circuit Breaker
+Retry
+Bulkhead
+Timeout
+Cache-Aside
+Write-Through
+Write-Behind
+Refresh-Ahead

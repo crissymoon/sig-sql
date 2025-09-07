@@ -1,0 +1,201 @@
+sale_id,product,amount,region,salesperson,date,quarter
+S1000,Cloud Service,16076.55,North America,Jane Williams,2025-04-11,Q4 2024
+S1001,Support,5506.11,Asia Pacific,Chris Davis,2025-03-02,Q4 2024
+S1002,Consulting,16688.52,Middle East,David Davis,2025-05-28,Q1 2024
+S1003,Support,15482.55,Latin America,Chris Miller,2025-01-20,Q4 2024
+S1004,Support,29049.93,Europe,Jessica Garcia,2025-05-31,Q1 2024
+S1005,Cloud Service,40638.28,Europe,Emma Rodriguez,2025-02-15,Q1 2024
+S1006,Training,1625.23,Europe,Sarah Miller,2025-03-20,Q4 2024
+S1007,Software License,35641.78,Middle East,Ryan Rodriguez,2024-11-11,Q3 2024
+S1008,Software License,33657.38,North America,Chris Miller,2025-05-03,Q3 2024
+S1009,Training,15263.88,North America,Jessica Garcia,2024-10-14,Q2 2024
+S1010,Consulting,34010.63,Asia Pacific,Jessica Smith,2025-05-07,Q3 2024
+S1011,Consulting,33149.58,North America,Sarah Rodriguez,2024-12-15,Q4 2024
+S1012,Training,46763.73,Middle East,Sarah Williams,2025-05-05,Q4 2024
+S1013,Cloud Service,37221.86,Latin America,Jessica Smith,2025-01-07,Q1 2024
+S1014,Training,49739.56,Asia Pacific,Emma Johnson,2024-09-21,Q1 2024
+S1015,Software License,15202.6,Europe,David Rodriguez,2025-03-09,Q3 2024
+S1016,Software License,8534.17,Middle East,David Davis,2025-07-24,Q3 2024
+S1017,Training,44683.17,Latin America,Chris Garcia,2025-06-13,Q4 2024
+S1018,Support,25535.33,Europe,Sarah Williams,2025-02-23,Q2 2024
+S1019,Software License,2821.61,Latin America,Chris Davis,2025-01-02,Q2 2024
+S1020,Consulting,26110.55,Europe,Jessica Garcia,2024-10-21,Q1 2024
+S1021,Training,16915.25,Latin America,David Davis,2025-07-19,Q4 2024
+S1022,Software License,41804.84,Europe,Jane Martinez,2024-09-28,Q2 2024
+S1023,Cloud Service,34941.46,Middle East,Jane Garcia,2025-04-06,Q2 2024
+S1024,Cloud Service,4608.39,Latin America,Chris Garcia,2025-02-17,Q2 2024
+S1025,Software License,23761.42,Asia Pacific,Jessica Garcia,2025-05-14,Q4 2024
+S1026,Support,10618.99,Latin America,Sarah Rodriguez,2025-01-14,Q2 2024
+S1027,Consulting,43817.13,Latin America,Emma Johnson,2025-02-18,Q4 2024
+S1028,Software License,18070.92,Asia Pacific,Emma Johnson,2025-02-12,Q1 2024
+S1029,Training,48733.93,North America,Jessica Smith,2025-07-25,Q4 2024
+S1030,Software License,30113.52,Asia Pacific,Chris Miller,2025-01-07,Q4 2024
+S1031,Software License,31216.81,North America,Jessica Smith,2024-11-24,Q1 2024
+S1032,Software License,36060.35,Asia Pacific,Chris Davis,2025-02-19,Q3 2024
+S1033,Training,29153.43,Europe,Sarah Rodriguez,2024-09-15,Q1 2024
+S1034,Consulting,41124.44,Middle East,Sarah Williams,2025-01-12,Q2 2024
+S1035,Software License,6818.68,Latin America,Emma Johnson,2025-07-26,Q2 2024
+S1036,Cloud Service,6256.45,Latin America,Chris Davis,2025-07-25,Q4 2024
+S1037,Cloud Service,41048.94,Middle East,David Davis,2025-03-02,Q2 2024
+S1038,Cloud Service,41454.15,Asia Pacific,Jane Williams,2024-09-09,Q1 2024
+S1039,Cloud Service,39171.96,Latin America,Sarah Rodriguez,2025-04-17,Q2 2024
+S1040,Training,14583.08,Middle East,David Davis,2025-02-05,Q1 2024
+S1041,Cloud Service,23524.71,Asia Pacific,Jane Williams,2025-07-18,Q1 2024
+S1042,Consulting,15848.61,Middle East,Jessica Smith,2025-01-30,Q2 2024
+S1043,Software License,47762.11,Latin America,Emma Johnson,2025-06-06,Q1 2024
+S1044,Support,18219.14,Middle East,Chris Davis,2025-07-05,Q1 2024
+S1045,Training,11862.31,North America,Chris Garcia,2025-03-16,Q3 2024
+S1046,Support,26082.54,Europe,Emma Miller,2025-03-18,Q2 2024
+S1047,Software License,6856.4,North America,Emma Miller,2025-02-13,Q4 2024
+S1048,Cloud Service,23726.01,Asia Pacific,Ryan Rodriguez,2025-07-27,Q2 2024
+S1049,Training,7552.37,Europe,Emma Rodriguez,2024-12-07,Q1 2024
+S1050,Support,21817.34,Latin America,Jane Garcia,2025-05-05,Q2 2024
+S1051,Support,12094.69,North America,Jane Martinez,2025-06-23,Q3 2024
+S1052,Cloud Service,11803.58,Europe,David Davis,2025-07-29,Q3 2024
+S1053,Cloud Service,11546.62,North America,Ryan Rodriguez,2024-10-19,Q3 2024
+S1054,Training,30740.66,Europe,Chris Garcia,2025-04-01,Q2 2024
+S1055,Consulting,17760.58,Europe,Sarah Miller,2025-04-26,Q3 2024
+S1056,Consulting,17570.82,Asia Pacific,Emma Rodriguez,2024-09-29,Q4 2024
+S1057,Cloud Service,6603.52,Latin America,Sarah Jones,2025-06-29,Q4 2024
+S1058,Software License,25028.71,Europe,Chris Garcia,2024-12-05,Q1 2024
+S1059,Support,38570.4,North America,Jane Garcia,2025-04-23,Q4 2024
+S1060,Cloud Service,40834.27,North America,Sarah Miller,2025-07-23,Q1 2024
+S1061,Consulting,10848.52,North America,Emma Rodriguez,2024-10-02,Q4 2024
+S1062,Cloud Service,42422.08,North America,Sarah Williams,2025-04-16,Q2 2024
+S1063,Cloud Service,15912.31,Middle East,Jessica Smith,2024-10-20,Q2 2024
+S1064,Consulting,6920.04,Latin America,Emma Johnson,2025-07-19,Q4 2024
+S1065,Cloud Service,23843.58,Asia Pacific,Emma Johnson,2024-09-24,Q3 2024
+S1066,Cloud Service,49591.84,Latin America,Ryan Rodriguez,2025-07-22,Q1 2024
+S1067,Cloud Service,48200.1,Middle East,Chris Davis,2025-05-25,Q1 2024
+S1068,Cloud Service,30929.05,North America,David Davis,2024-09-23,Q1 2024
+S1069,Support,15787.69,Middle East,David Davis,2024-11-07,Q3 2024
+S1070,Consulting,28748.34,North America,Sarah Miller,2025-06-21,Q2 2024
+S1071,Support,32177.45,Europe,Jane Garcia,2025-06-21,Q3 2024
+S1072,Software License,22351.05,Europe,Jane Garcia,2025-05-15,Q2 2024
+S1073,Software License,40771.84,Latin America,Jane Williams,2025-02-11,Q1 2024
+S1074,Software License,49642.97,Middle East,Emma Rodriguez,2025-02-11,Q2 2024
+S1075,Support,25638.85,Latin America,Jane Williams,2024-09-27,Q2 2024
+S1076,Consulting,25994.72,Asia Pacific,Jessica Smith,2025-03-03,Q2 2024
+S1077,Software License,3517.92,Europe,Ryan Rodriguez,2025-02-02,Q1 2024
+S1078,Support,1368.12,North America,Chris Garcia,2024-12-09,Q1 2024
+S1079,Support,6167.7,Asia Pacific,Emma Johnson,2024-10-07,Q1 2024
+S1080,Cloud Service,22755.96,North America,Jane Martinez,2025-02-19,Q1 2024
+S1081,Consulting,18598.28,Asia Pacific,Jane Garcia,2025-08-02,Q3 2024
+S1082,Support,49610.55,Europe,Sarah Williams,2025-06-04,Q2 2024
+S1083,Software License,12251.38,North America,Ryan Rodriguez,2024-10-24,Q3 2024
+S1084,Training,23965.01,Middle East,David Rodriguez,2025-05-31,Q1 2024
+S1085,Cloud Service,8917.17,Europe,Chris Garcia,2025-04-25,Q3 2024
+S1086,Support,28304.81,Latin America,Sarah Miller,2024-11-01,Q3 2024
+S1087,Software License,29097.37,Asia Pacific,Chris Davis,2025-01-12,Q3 2024
+S1088,Consulting,2786.12,Middle East,Chris Garcia,2025-07-04,Q4 2024
+S1089,Consulting,37340.67,Europe,Emma Rodriguez,2024-12-07,Q4 2024
+S1090,Software License,18672.66,Latin America,Emma Rodriguez,2024-12-09,Q2 2024
+S1091,Cloud Service,8107.9,Middle East,Emma Rodriguez,2025-01-13,Q3 2024
+S1092,Training,44727.13,Middle East,Ryan Rodriguez,2025-07-27,Q4 2024
+S1093,Software License,39750.61,Asia Pacific,Jane Martinez,2025-06-27,Q2 2024
+S1094,Training,49626.73,Latin America,David Rodriguez,2024-11-11,Q2 2024
+S1095,Support,15290.54,Europe,David Davis,2025-04-20,Q3 2024
+S1096,Support,18376.46,Latin America,Jane Garcia,2025-06-19,Q4 2024
+S1097,Training,25520.55,Latin America,Jessica Smith,2025-03-17,Q1 2024
+S1098,Support,30066.27,Europe,Emma Miller,2025-03-21,Q2 2024
+S1099,Training,48320.91,Asia Pacific,Jessica Smith,2025-01-31,Q1 2024
+S1100,Software License,26034.64,Latin America,Sarah Rodriguez,2024-11-02,Q4 2024
+S1101,Consulting,37625.08,Europe,David Davis,2025-05-30,Q3 2024
+S1102,Cloud Service,49027.82,Asia Pacific,David Rodriguez,2024-09-30,Q3 2024
+S1103,Support,28914.91,Europe,Jessica Smith,2024-11-06,Q4 2024
+S1104,Cloud Service,18814.48,Latin America,Jane Martinez,2025-04-01,Q3 2024
+S1105,Training,23164.96,North America,David Davis,2025-04-23,Q2 2024
+S1106,Software License,35071.74,Europe,Jessica Garcia,2024-11-03,Q1 2024
+S1107,Cloud Service,40858.24,Europe,Jane Garcia,2025-08-19,Q4 2024
+S1108,Support,41850.06,Latin America,Emma Miller,2024-10-26,Q2 2024
+S1109,Training,12916.52,Latin America,David Davis,2025-04-02,Q2 2024
+S1110,Training,44169.4,Asia Pacific,Ryan Rodriguez,2024-09-28,Q4 2024
+S1111,Software License,7083.04,Latin America,David Rodriguez,2024-09-16,Q3 2024
+S1112,Training,22318.88,Middle East,Sarah Miller,2025-07-07,Q1 2024
+S1113,Support,9572.38,Latin America,Jessica Garcia,2025-08-02,Q2 2024
+S1114,Software License,18555.08,Asia Pacific,David Davis,2025-02-12,Q3 2024
+S1115,Cloud Service,18234.98,Latin America,Chris Davis,2025-06-17,Q3 2024
+S1116,Cloud Service,46638.67,Middle East,Jessica Smith,2025-06-19,Q1 2024
+S1117,Consulting,5967.96,Europe,Jane Martinez,2025-07-15,Q3 2024
+S1118,Training,36490.0,Europe,Sarah Jones,2025-01-02,Q1 2024
+S1119,Software License,26381.43,Latin America,David Davis,2024-11-29,Q1 2024
+S1120,Cloud Service,14154.75,Europe,Emma Rodriguez,2024-10-09,Q4 2024
+S1121,Training,3347.8,Latin America,Sarah Miller,2025-03-04,Q1 2024
+S1122,Cloud Service,20014.99,Asia Pacific,Jane Williams,2025-05-17,Q3 2024
+S1123,Software License,7065.06,Latin America,Jane Garcia,2024-12-24,Q3 2024
+S1124,Cloud Service,22543.69,Latin America,Emma Rodriguez,2025-07-24,Q1 2024
+S1125,Support,33699.17,Asia Pacific,Emma Miller,2024-12-24,Q1 2024
+S1126,Support,19648.44,Middle East,Emma Rodriguez,2025-07-24,Q3 2024
+S1127,Cloud Service,10146.92,Europe,Sarah Jones,2025-05-19,Q4 2024
+S1128,Consulting,45220.79,North America,Sarah Rodriguez,2025-02-11,Q3 2024
+S1129,Training,30819.25,Asia Pacific,Jane Garcia,2024-12-27,Q3 2024
+S1130,Support,39475.08,Europe,Sarah Rodriguez,2024-11-19,Q4 2024
+S1131,Software License,13479.58,Middle East,Sarah Miller,2025-08-19,Q3 2024
+S1132,Cloud Service,25200.5,Latin America,Jessica Garcia,2024-12-12,Q2 2024
+S1133,Cloud Service,17950.25,Asia Pacific,Jessica Smith,2024-09-22,Q4 2024
+S1134,Training,29302.12,Latin America,Jane Martinez,2025-03-18,Q4 2024
+S1135,Consulting,19777.24,Middle East,Chris Miller,2025-05-10,Q1 2024
+S1136,Training,41602.27,Middle East,Chris Garcia,2024-11-20,Q1 2024
+S1137,Support,26569.38,Asia Pacific,David Davis,2024-12-14,Q1 2024
+S1138,Cloud Service,11927.41,North America,Emma Rodriguez,2025-03-03,Q3 2024
+S1139,Support,15843.49,Europe,Jane Martinez,2024-09-07,Q3 2024
+S1140,Support,16604.43,Asia Pacific,Ryan Rodriguez,2024-11-19,Q4 2024
+S1141,Software License,5196.86,Middle East,Chris Miller,2025-02-07,Q3 2024
+S1142,Software License,16899.3,Middle East,Jessica Garcia,2024-11-11,Q3 2024
+S1143,Software License,16798.01,Asia Pacific,David Rodriguez,2024-09-25,Q1 2024
+S1144,Cloud Service,10293.75,North America,Chris Garcia,2024-12-30,Q4 2024
+S1145,Consulting,22970.83,Europe,Chris Garcia,2025-06-29,Q2 2024
+S1146,Cloud Service,27081.4,North America,Chris Miller,2025-05-15,Q1 2024
+S1147,Cloud Service,8455.16,Middle East,Sarah Williams,2024-11-11,Q3 2024
+S1148,Cloud Service,39411.93,North America,Jessica Smith,2024-12-15,Q1 2024
+S1149,Cloud Service,15479.23,North America,Chris Davis,2024-09-25,Q4 2024
+S1150,Support,31542.16,Middle East,Chris Garcia,2025-03-21,Q2 2024
+S1151,Consulting,48298.23,Latin America,Emma Miller,2025-04-16,Q3 2024
+S1152,Consulting,13969.23,North America,Jane Martinez,2025-05-26,Q3 2024
+S1153,Cloud Service,2210.42,North America,Chris Garcia,2025-07-07,Q1 2024
+S1154,Consulting,26578.64,Latin America,David Davis,2025-08-04,Q3 2024
+S1155,Cloud Service,43250.16,Latin America,Emma Johnson,2024-10-07,Q1 2024
+S1156,Software License,35822.74,Latin America,Jessica Garcia,2025-05-17,Q1 2024
+S1157,Training,16216.73,Europe,Emma Rodriguez,2025-07-31,Q1 2024
+S1158,Software License,23526.87,Asia Pacific,Jane Martinez,2025-02-15,Q4 2024
+S1159,Cloud Service,44237.69,Latin America,Emma Rodriguez,2025-03-28,Q3 2024
+S1160,Support,27585.2,Europe,Chris Garcia,2025-06-13,Q1 2024
+S1161,Cloud Service,49642.03,Europe,Jessica Smith,2024-09-27,Q3 2024
+S1162,Cloud Service,15860.98,Middle East,Jane Garcia,2024-09-26,Q4 2024
+S1163,Training,16113.76,Middle East,Jessica Smith,2025-08-17,Q1 2024
+S1164,Training,14712.12,Middle East,Chris Davis,2025-06-30,Q3 2024
+S1165,Cloud Service,1666.06,Latin America,Emma Rodriguez,2025-07-27,Q4 2024
+S1166,Support,9999.2,Middle East,Jane Williams,2024-12-23,Q1 2024
+S1167,Software License,22445.34,Europe,Jane Martinez,2025-05-01,Q4 2024
+S1168,Software License,17328.84,Europe,Ryan Rodriguez,2025-06-14,Q4 2024
+S1169,Software License,13726.64,North America,Jane Williams,2024-11-08,Q3 2024
+S1170,Cloud Service,23726.76,Middle East,Jane Garcia,2025-01-15,Q2 2024
+S1171,Support,16427.96,Latin America,Chris Garcia,2024-12-07,Q2 2024
+S1172,Consulting,47726.3,Asia Pacific,Sarah Miller,2025-07-18,Q1 2024
+S1173,Software License,1638.28,North America,Jane Garcia,2025-02-10,Q2 2024
+S1174,Cloud Service,39175.24,Latin America,Jane Williams,2025-02-13,Q3 2024
+S1175,Training,16760.89,Middle East,Sarah Miller,2024-11-11,Q3 2024
+S1176,Software License,6939.86,Middle East,David Davis,2025-06-25,Q4 2024
+S1177,Cloud Service,9191.3,Latin America,Jessica Garcia,2024-12-01,Q3 2024
+S1178,Consulting,4682.95,Latin America,Emma Miller,2025-07-09,Q4 2024
+S1179,Software License,33201.68,Europe,Jane Garcia,2025-08-14,Q3 2024
+S1180,Training,14794.79,Latin America,Chris Davis,2025-07-28,Q3 2024
+S1181,Cloud Service,31600.56,North America,Chris Garcia,2025-08-10,Q2 2024
+S1182,Software License,39612.69,Middle East,David Rodriguez,2024-11-02,Q4 2024
+S1183,Cloud Service,46212.82,Middle East,Ryan Rodriguez,2025-05-02,Q3 2024
+S1184,Training,18065.83,Latin America,Sarah Miller,2025-03-19,Q4 2024
+S1185,Training,32122.88,Latin America,David Davis,2025-07-09,Q2 2024
+S1186,Support,27012.21,Middle East,Jane Williams,2024-11-16,Q1 2024
+S1187,Software License,25888.17,Latin America,Sarah Williams,2025-08-25,Q3 2024
+S1188,Consulting,40189.37,Europe,Jessica Garcia,2024-12-17,Q3 2024
+S1189,Training,26485.68,Asia Pacific,David Davis,2025-02-18,Q2 2024
+S1190,Software License,49166.2,North America,Emma Johnson,2024-09-23,Q2 2024
+S1191,Cloud Service,20085.66,Latin America,David Rodriguez,2025-09-04,Q1 2024
+S1192,Training,28698.81,North America,Emma Johnson,2024-09-11,Q4 2024
+S1193,Consulting,36186.42,North America,Jessica Smith,2025-01-06,Q2 2024
+S1194,Consulting,30350.91,Latin America,Sarah Williams,2024-11-30,Q4 2024
+S1195,Software License,14623.97,Europe,Chris Garcia,2025-01-27,Q1 2024
+S1196,Support,42818.59,Asia Pacific,Chris Garcia,2024-11-20,Q2 2024
+S1197,Support,48784.27,Middle East,Jessica Garcia,2025-06-30,Q2 2024
+S1198,Consulting,22038.2,Asia Pacific,Jessica Garcia,2025-06-13,Q1 2024
+S1199,Consulting,35121.8,Europe,Sarah Jones,2024-09-19,Q2 2024

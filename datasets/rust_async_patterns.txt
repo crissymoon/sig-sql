@@ -1,0 +1,16 @@
+async fn function() -> Result<T, E>
+await?
+.await
+async move { }
+tokio::spawn(async move { })
+tokio::time::sleep(Duration::from_secs(1)).await
+tokio::select! { }
+futures::join!(future1, future2)
+futures::try_join!(future1, future2)
+Stream::next().await
+async_stream::stream! { }
+Pin<Box<dyn Future<Output = T>>>
+tokio::sync::Mutex
+tokio::sync::RwLock
+tokio::sync::mpsc::channel
+tokio::sync::oneshot::channel

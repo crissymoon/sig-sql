@@ -1,0 +1,51 @@
+{
+  "addition": [
+    "furthermore",
+    "moreover",
+    "in addition",
+    "also",
+    "besides"
+  ],
+  "contrast": [
+    "however",
+    "nevertheless",
+    "on the other hand",
+    "in contrast",
+    "although"
+  ],
+  "cause_effect": [
+    "therefore",
+    "consequently",
+    "as a result",
+    "because",
+    "since"
+  ],
+  "sequence": [
+    "first",
+    "then",
+    "next",
+    "finally",
+    "meanwhile"
+  ],
+  "emphasis": [
+    "indeed",
+    "certainly",
+    "obviously",
+    "clearly",
+    "definitely"
+  ],
+  "example": [
+    "for example",
+    "for instance",
+    "such as",
+    "namely",
+    "specifically"
+  ],
+  "summary": [
+    "in conclusion",
+    "to sum up",
+    "overall",
+    "in summary",
+    "briefly"
+  ]
+}

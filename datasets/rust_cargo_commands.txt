@@ -1,0 +1,28 @@
+cargo new
+cargo init
+cargo build
+cargo run
+cargo test
+cargo check
+cargo clippy
+cargo fmt
+cargo doc
+cargo publish
+cargo install
+cargo uninstall
+cargo update
+cargo clean
+cargo tree
+cargo audit
+cargo outdated
+cargo expand
+cargo watch
+cargo tarpaulin
+cargo criterion
+cargo flamegraph
+cargo build --release
+cargo test --release
+cargo run --bin
+cargo build --target
+cargo cross
+cargo dist

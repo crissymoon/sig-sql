@@ -1,11 +1,11 @@
 import os
 import sys
-sys.path.append('..')
-from learning_test_system import AdaptiveChatSystem
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
 import json
+
+# Remove the problematic import - we'll handle this in views.py instead
 
 class ChatSession(models.Model):
     session_id = models.CharField(max_length=100, unique=True)

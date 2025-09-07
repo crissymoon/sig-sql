@@ -1,0 +1,50 @@
+HTTP
+HTTPS
+FTP
+SFTP
+SSH
+Telnet
+SMTP
+POP3
+IMAP
+DNS
+DHCP
+TCP
+UDP
+IP
+IPv4
+IPv6
+ICMP
+ARP
+NAT
+VPN
+SSL
+TLS
+WPA
+WEP
+WPA2
+WPA3
+802.11
+Ethernet
+WiFi
+Bluetooth
+NFC
+LTE
+5G
+CDN
+Load Balancer
+Proxy
+Reverse Proxy
+API Gateway
+WebSocket
+REST
+GraphQL
+SOAP
+OAuth
+JWT
+Session
+Cookie
+CORS
+CSRF
+XSS
+SQL Injection

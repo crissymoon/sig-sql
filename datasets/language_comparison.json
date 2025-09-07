@@ -1,0 +1,37 @@
+{
+  "memory_safety": {
+    "zig": "Manual with allocators and safety checks",
+    "rust": "Automatic with ownership system",
+    "go": "Garbage collected with runtime safety"
+  },
+  "performance": {
+    "zig": "Zero-cost abstractions, comptime optimization",
+    "rust": "Zero-cost abstractions, minimal runtime",
+    "go": "Fast compilation, runtime garbage collection overhead"
+  },
+  "learning_curve": {
+    "zig": "Moderate, explicit control",
+    "rust": "Steep, complex type system",
+    "go": "Gentle, simple syntax"
+  },
+  "use_cases": {
+    "zig": [
+      "System programming",
+      "Embedded systems",
+      "Game engines",
+      "Compilers"
+    ],
+    "rust": [
+      "System programming",
+      "Web backends",
+      "CLI tools",
+      "Blockchain"
+    ],
+    "go": [
+      "Web services",
+      "Cloud infrastructure",
+      "DevOps tools",
+      "Microservices"
+    ]
+  }
+}

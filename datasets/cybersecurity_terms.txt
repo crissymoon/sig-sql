@@ -1,0 +1,34 @@
+Encryption
+Firewall
+Antivirus
+Malware
+Phishing
+Ransomware
+SQL Injection
+XSS
+CSRF
+DDoS
+Penetration Testing
+Vulnerability
+Zero Day
+SSL
+TLS
+VPN
+Two Factor Authentication
+Biometrics
+Public Key Infrastructure
+Digital Certificate
+Hash Function
+Salt
+Brute Force
+Social Engineering
+Spear Phishing
+APT
+Botnet
+Honeypot
+IDS
+IPS
+SIEM
+SOC
+Incident Response
+Forensics

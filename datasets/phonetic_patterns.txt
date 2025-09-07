@@ -1,0 +1,5 @@
+Consonant Clusters: bl, br, cl, cr, dr, fl, fr, gl, gr, pl, pr, sc, sk, sl, sm, sn, sp, st, sw, tr, tw
+Vowel Sounds: /æ/ cat, /e/ bed, /ɪ/ sit, /ɒ/ hot, /ʌ/ cup, /ʊ/ put, /i:/ see, /ɑ:/ car, /ɔ:/ saw, /u:/ too
+Diphthongs: /aɪ/ my, /eɪ/ day, /ɔɪ/ boy, /aʊ/ now, /əʊ/ go, /ɪə/ here, /eə/ there, /ʊə/ sure
+Silent Letters: know, lamb, castle, listen, honest, island, psychology, knee, write, thumb
+Stress Patterns: PREsent (noun) vs preSENT (verb), REcord (noun) vs reCORD (verb)

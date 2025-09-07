@@ -1,0 +1,22 @@
+{
+  "article_errors": [
+    "Incorrect: I want to be doctor. | Correct: I want to be a doctor.",
+    "Incorrect: She is playing piano. | Correct: She is playing the piano.",
+    "Incorrect: I like a music. | Correct: I like music."
+  ],
+  "preposition_errors": [
+    "Incorrect: I am good in English. | Correct: I am good at English.",
+    "Incorrect: She depends from her parents. | Correct: She depends on her parents.",
+    "Incorrect: He is afraid from spiders. | Correct: He is afraid of spiders."
+  ],
+  "word_order_errors": [
+    "Incorrect: I like very much coffee. | Correct: I like coffee very much.",
+    "Incorrect: Always she is late. | Correct: She is always late.",
+    "Incorrect: I know not the answer. | Correct: I don't know the answer."
+  ],
+  "false_friends": [
+    "Spanish 'embarazada' \u2260 English 'embarrassed' (means pregnant)",
+    "French 'preservatif' \u2260 English 'preservative' (means condom)",
+    "German 'Gift' \u2260 English 'gift' (means poison)"
+  ]
+}

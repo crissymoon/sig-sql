@@ -1,0 +1,35 @@
+{
+  "synonyms": [
+    "happy - joyful - cheerful - glad - content",
+    "big - large - huge - enormous - massive",
+    "small - tiny - little - minute - miniature",
+    "fast - quick - rapid - swift - speedy",
+    "beautiful - gorgeous - stunning - lovely - attractive"
+  ],
+  "antonyms": [
+    "hot - cold",
+    "big - small",
+    "happy - sad",
+    "fast - slow",
+    "light - dark",
+    "good - bad",
+    "old - young",
+    "rich - poor",
+    "strong - weak",
+    "easy - difficult"
+  ],
+  "hypernyms_hyponyms": [
+    "animal > mammal > dog > poodle",
+    "vehicle > car > sedan > Toyota Camry",
+    "furniture > chair > armchair > recliner",
+    "food > fruit > citrus > orange",
+    "building > house > mansion > palace"
+  ],
+  "meronyms": [
+    "car: engine, wheels, doors, windows",
+    "house: roof, walls, foundation, rooms",
+    "computer: processor, memory, keyboard, screen",
+    "tree: roots, trunk, branches, leaves",
+    "book: cover, pages, chapters, index"
+  ]
+}

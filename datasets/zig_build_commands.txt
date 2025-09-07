@@ -1,0 +1,13 @@
+zig build
+zig build run
+zig build test
+zig build install
+zig build --help
+zig build --verbose
+zig build --summary all
+zig build -Doptimize=ReleaseFast
+zig build -Doptimize=ReleaseSmall
+zig build -Dtarget=x86_64-linux-gnu
+zig build --prefix /usr/local
+zig build --cache-dir build-cache
+zig build --global-cache-dir cache

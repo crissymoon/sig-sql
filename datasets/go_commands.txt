@@ -1,0 +1,34 @@
+go mod init
+go mod tidy
+go mod download
+go mod verify
+go get
+go install
+go build
+go run
+go test
+go fmt
+go vet
+go doc
+go version
+go env
+go list
+go clean
+go generate
+go work init
+go work use
+go work sync
+gofmt
+goimports
+golint
+staticcheck
+gosec
+ineffassign
+go test -v
+go test -race
+go test -cover
+go test -bench
+go build -ldflags
+go build -tags
+go build -o
+go mod graph

@@ -1,0 +1,24 @@
+AWS
+Azure
+Google Cloud
+IBM Cloud
+Oracle Cloud
+Alibaba Cloud
+DigitalOcean
+Linode
+Vultr
+Heroku
+Vercel
+Netlify
+CloudFlare
+Fastly
+CDN77
+KeyCDN
+StackPath
+BunnyCDN
+Firebase
+Supabase
+PlanetScale
+Railway
+Render
+Fly.io

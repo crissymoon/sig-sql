@@ -1,0 +1,8 @@
+Subject + Verb (S + V): The dog barks.
+Subject + Verb + Object (S + V + O): She reads books.
+Subject + Verb + Complement (S + V + C): He is tall.
+Subject + Verb + Indirect Object + Direct Object (S + V + IO + DO): I gave him a gift.
+Subject + Verb + Object + Complement (S + V + O + C): They elected her president.
+Compound: I like coffee, but she prefers tea.
+Complex: When it rains, we stay inside.
+Compound-Complex: Although it was late, we went to the store, and we bought groceries.

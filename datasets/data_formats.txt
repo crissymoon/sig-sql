@@ -1,0 +1,46 @@
+JSON
+XML
+YAML
+TOML
+CSV
+TSV
+Parquet
+Avro
+Protocol Buffers
+MessagePack
+BSON
+CBOR
+Apache Arrow
+ORC
+HDF5
+NetCDF
+FITS
+Base64
+URL Encoding
+HTML Entities
+Unicode
+UTF-8
+UTF-16
+ASCII
+Binary
+Hexadecimal
+Octal
+Compression
+Gzip
+Deflate
+Brotli
+LZ4
+Snappy
+Encryption
+Hashing
+MD5
+SHA-1
+SHA-256
+SHA-512
+HMAC
+JWT
+XML Schema
+JSON Schema
+OpenAPI
+Swagger
+RAML

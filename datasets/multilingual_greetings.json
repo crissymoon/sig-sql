@@ -1,0 +1,72 @@
+{
+  "english": [
+    "hello",
+    "good morning",
+    "good afternoon",
+    "good evening",
+    "goodbye"
+  ],
+  "spanish": [
+    "hola",
+    "buenos días",
+    "buenas tardes",
+    "buenas noches",
+    "adiós"
+  ],
+  "french": [
+    "bonjour",
+    "bon matin",
+    "bon après-midi",
+    "bonsoir",
+    "au revoir"
+  ],
+  "german": [
+    "hallo",
+    "guten Morgen",
+    "guten Tag",
+    "guten Abend",
+    "auf Wiedersehen"
+  ],
+  "italian": [
+    "ciao",
+    "buongiorno",
+    "buon pomeriggio",
+    "buonasera",
+    "arrivederci"
+  ],
+  "portuguese": [
+    "olá",
+    "bom dia",
+    "boa tarde",
+    "boa noite",
+    "tchau"
+  ],
+  "japanese": [
+    "こんにちは",
+    "おはよう",
+    "こんにちは",
+    "こんばんは",
+    "さようなら"
+  ],
+  "korean": [
+    "안녕하세요",
+    "좋은 아침",
+    "좋은 오후",
+    "좋은 저녁",
+    "안녕히 가세요"
+  ],
+  "chinese": [
+    "你好",
+    "早上好",
+    "下午好",
+    "晚上好",
+    "再见"
+  ],
+  "russian": [
+    "привет",
+    "доброе утро",
+    "добрый день",
+    "добрый вечер",
+    "до свидания"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "old_english_to_modern": [
+    "Old English 'hl\u0101f' \u2192 Modern English 'loaf'",
+    "Old English 'hl\u0101fweard' \u2192 Modern English 'lord' (loaf-ward)",
+    "Old English 'hl\u01e3fdige' \u2192 Modern English 'lady' (loaf-kneader)",
+    "Old English 'cyning' \u2192 Modern English 'king'",
+    "Old English 'c\u016b' \u2192 Modern English 'cow'"
+  ],
+  "latin_borrowings": [
+    "Latin 'computare' \u2192 English 'compute'",
+    "Latin 'universitas' \u2192 English 'university'",
+    "Latin 'communicare' \u2192 English 'communicate'",
+    "Latin 'informare' \u2192 English 'inform'",
+    "Latin 'demonstrare' \u2192 English 'demonstrate'"
+  ],
+  "sound_changes": [
+    "Great Vowel Shift: Middle English /i\u02d0/ \u2192 Modern English /a\u026a/ (like 'time')",
+    "Grimm's Law: Proto-Indo-European *p \u2192 Germanic *f (pater \u2192 father)",
+    "Rhotacism: Latin 'honor' \u2192 'honoris' (n becomes r between vowels)"
+  ]
+}

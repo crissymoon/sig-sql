@@ -1,0 +1,15 @@
+Zig: comptime evaluation for zero-cost abstractions
+Rust: zero-cost abstractions with compile-time guarantees
+Go: escape analysis for stack vs heap allocation
+Profile-guided optimization (PGO)
+Link-time optimization (LTO)
+Dead code elimination
+Inlining strategies
+Loop unrolling and vectorization
+Branch prediction optimization
+Cache locality improvements
+Memory prefetching
+NUMA awareness
+CPU affinity and thread pinning
+Lock contention reduction
+False sharing avoidance

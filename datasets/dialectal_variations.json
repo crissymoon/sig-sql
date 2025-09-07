@@ -1,0 +1,27 @@
+{
+  "british_vs_american": {
+    "vocabulary": [
+      "lift (UK) - elevator (US)",
+      "biscuit (UK) - cookie (US)",
+      "lorry (UK) - truck (US)",
+      "petrol (UK) - gas/gasoline (US)",
+      "rubber (UK) - eraser (US)",
+      "queue (UK) - line (US)",
+      "jumper (UK) - sweater (US)",
+      "autumn (UK) - fall (US)"
+    ],
+    "spelling": [
+      "colour (UK) - color (US)",
+      "realise (UK) - realize (US)",
+      "centre (UK) - center (US)",
+      "defence (UK) - defense (US)",
+      "travelling (UK) - traveling (US)"
+    ]
+  },
+  "register_variations": {
+    "formal": "I would like to request your assistance.",
+    "neutral": "Could you help me?",
+    "informal": "Can you give me a hand?",
+    "very_informal": "Help me out?"
+  }
+}

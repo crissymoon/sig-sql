@@ -1,0 +1,9 @@
+Zig: Manual memory management with allocators
+Rust: Ownership system with automatic memory management
+Go: Garbage collector handles memory automatically
+Zig: defer for cleanup, errdefer for error cleanup
+Rust: RAII (Resource Acquisition Is Initialization)
+Go: Finalizers and runtime garbage collection
+Zig: Comptime memory allocation
+Rust: Stack vs heap allocation control
+Go: Escape analysis determines allocation location

@@ -1,0 +1,147 @@
+{
+  "nouns": {
+    "common": [
+      "dog",
+      "house",
+      "book",
+      "tree",
+      "computer",
+      "happiness",
+      "freedom",
+      "knowledge"
+    ],
+    "proper": [
+      "John",
+      "London",
+      "Microsoft",
+      "Amazon",
+      "Shakespeare",
+      "Einstein"
+    ],
+    "abstract": [
+      "love",
+      "courage",
+      "wisdom",
+      "beauty",
+      "justice",
+      "democracy"
+    ],
+    "collective": [
+      "team",
+      "family",
+      "crowd",
+      "audience",
+      "committee",
+      "flock"
+    ],
+    "compound": [
+      "notebook",
+      "sunshine",
+      "basketball",
+      "keyboard",
+      "smartphone"
+    ]
+  },
+  "verbs": {
+    "action": [
+      "run",
+      "jump",
+      "write",
+      "sing",
+      "dance",
+      "cook",
+      "drive",
+      "study"
+    ],
+    "linking": [
+      "is",
+      "are",
+      "was",
+      "were",
+      "become",
+      "seem",
+      "appear",
+      "feel"
+    ],
+    "helping": [
+      "will",
+      "would",
+      "can",
+      "could",
+      "may",
+      "might",
+      "must",
+      "should"
+    ],
+    "irregular": [
+      "go/went/gone",
+      "see/saw/seen",
+      "eat/ate/eaten",
+      "think/thought/thought"
+    ]
+  },
+  "adjectives": {
+    "descriptive": [
+      "beautiful",
+      "large",
+      "red",
+      "intelligent",
+      "happy",
+      "difficult"
+    ],
+    "comparative": [
+      "bigger",
+      "smaller",
+      "faster",
+      "more beautiful",
+      "less expensive"
+    ],
+    "superlative": [
+      "biggest",
+      "smallest",
+      "fastest",
+      "most beautiful",
+      "least expensive"
+    ],
+    "demonstrative": [
+      "this",
+      "that",
+      "these",
+      "those"
+    ]
+  },
+  "adverbs": {
+    "manner": [
+      "quickly",
+      "carefully",
+      "loudly",
+      "beautifully",
+      "efficiently"
+    ],
+    "time": [
+      "now",
+      "then",
+      "yesterday",
+      "tomorrow",
+      "always",
+      "never",
+      "often"
+    ],
+    "place": [
+      "here",
+      "there",
+      "everywhere",
+      "nowhere",
+      "upstairs",
+      "outside"
+    ],
+    "degree": [
+      "very",
+      "quite",
+      "extremely",
+      "somewhat",
+      "rather",
+      "too"
+    ]
+  }
+}

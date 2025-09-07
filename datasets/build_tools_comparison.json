@@ -1,0 +1,23 @@
+{
+  "zig": {
+    "primary": "zig build",
+    "package_manager": "Built-in (zig fetch)",
+    "test_runner": "zig test",
+    "formatter": "zig fmt",
+    "linter": "Built-in compiler warnings"
+  },
+  "rust": {
+    "primary": "cargo build",
+    "package_manager": "cargo",
+    "test_runner": "cargo test",
+    "formatter": "cargo fmt",
+    "linter": "cargo clippy"
+  },
+  "go": {
+    "primary": "go build",
+    "package_manager": "go mod",
+    "test_runner": "go test",
+    "formatter": "go fmt",
+    "linter": "go vet / staticcheck"
+  }
+}
