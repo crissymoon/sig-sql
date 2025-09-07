@@ -12,7 +12,7 @@ import math
 def parse_moon_sigmoid(filename):
     """Parse and validate Moon language sigmoid function"""
     
-    print(f"🌙 Parsing Moon file: {filename}")
+    print(f"Parsing Moon file: {filename}")
     print("=" * 50)
     
     try:
@@ -24,23 +24,23 @@ def parse_moon_sigmoid(filename):
         
         # Validate syntax
         if validate_moon_syntax(content):
-            print("✅ Moon syntax validation: PASSED")
+            print("Moon syntax validation: PASSED")
         else:
-            print("❌ Moon syntax validation: FAILED")
+            print("Moon syntax validation: FAILED")
             return False
         
         # Simulate sigmoid function execution
         if 'sigmoid' in functions:
-            print("\n🔢 Simulating sigmoid function:")
+            print("\nSimulating sigmoid function:")
             simulate_sigmoid_execution()
         
         return True
         
     except FileNotFoundError:
-        print(f"❌ File not found: {filename}")
+        print(f"File not found: {filename}")
         return False
     except Exception as e:
-        print(f"❌ Error parsing file: {e}")
+        print(f"Error parsing file: {e}")
         return False
 
 def extract_functions(content):
@@ -50,7 +50,7 @@ def extract_functions(content):
     function_pattern = r'm\s+(\w+)\s*\([^)]*\)\s*\{'
     functions = re.findall(function_pattern, content)
     
-    print(f"📋 Found functions: {', '.join(functions)}")
+    print(f"Found functions: {', '.join(functions)}")
     return functions
 
 def validate_moon_syntax(content):
@@ -69,9 +69,9 @@ def validate_moon_syntax(content):
     
     for check_name, pattern, text in checks:
         if re.search(pattern, text):
-            print(f"✅ {check_name}: Found")
+            print(f"{check_name}: Found")
         else:
-            print(f"⚠️  {check_name}: Not found")
+            print(f"{check_name}: Not found")
     
     return all_passed
 
@@ -110,7 +110,7 @@ def create_moon_test_data():
     with open('/Users/mac/Desktop/sig-sql/moon/test_data.txt', 'w') as f:
         f.write(test_data)
     
-    print("📁 Created test_data.txt for Moon sigmoid function")
+    print("Created test_data.txt for Moon sigmoid function")
 
 def analyze_moon_features(filename):
     """Analyze specific Moon language features used"""
@@ -143,7 +143,7 @@ def analyze_moon_features(filename):
             }
         }
         
-        print("\n📊 Moon Language Features Analysis:")
+        print("\nMoon Language Features Analysis:")
         print("=" * 40)
         
         for category, items in features.items():
@@ -154,13 +154,13 @@ def analyze_moon_features(filename):
         return features
         
     except Exception as e:
-        print(f"❌ Error analyzing features: {e}")
+        print(f"Error analyzing features: {e}")
         return {}
 
 def main():
     """Main function to test Moon sigmoid implementations"""
     
-    print("🌙 Moon Language Sigmoid Function Validator")
+    print("Moon Language Sigmoid Function Validator")
     print("=" * 50)
     
     # Test both sigmoid implementations
@@ -179,7 +179,7 @@ def main():
     print(f"\n{'='*60}")
     create_moon_test_data()
     
-    print(f"\n🎉 Moon sigmoid validation complete!")
+    print(f"\nMoon sigmoid validation complete!")
     print("   Files created:")
     print("   - simple_sigmoid.moon (basic implementation)")
     print("   - sigmoid_function.moon (comprehensive implementation)")

@@ -1,0 +1,179 @@
+# Ruby Standard Library and Popular Gems
+
+# Standard Library
+Array - array manipulation methods
+Hash - hash table operations
+String - string manipulation methods
+Integer - integer operations
+Float - floating point operations
+Rational - rational number operations
+Complex - complex number operations
+Numeric - numeric operations base class
+Object - base class for all objects
+Class - class manipulation methods
+Module - module functionality
+Proc - procedure objects
+Method - method objects
+Binding - variable and method bindings
+Thread - lightweight concurrent execution
+Fiber - cooperative concurrency
+Mutex - mutual exclusion locks
+ConditionVariable - thread synchronization
+Queue - thread-safe queues
+File - file I/O operations
+Dir - directory operations
+IO - input/output operations
+StringIO - string-based I/O
+Pathname - filesystem path manipulation
+FileUtils - file utility methods
+Tempfile - temporary file creation
+CSV - comma-separated values handling
+JSON - JSON parsing and generation
+YAML - YAML parsing and generation
+XML - XML processing
+URI - uniform resource identifier handling
+Net::HTTP - HTTP client functionality
+Net::FTP - FTP client functionality
+Net::SMTP - SMTP client functionality
+OpenSSL - SSL/TLS functionality
+Digest - cryptographic hash functions
+Base64 - base64 encoding/decoding
+Zlib - compression functionality
+Time - time representation and manipulation
+Date - date representation and calculations
+DateTime - date and time functionality
+Benchmark - performance measurement
+Logger - flexible logging functionality
+OptionParser - command-line option parsing
+GetoptLong - GNU-style option parsing
+Readline - command-line editing
+Abbrev - abbreviation calculation
+Set - mathematical set operations
+Matrix - matrix mathematical operations
+Prime - prime number functionality
+Random - random number generation
+SecureRandom - secure random number generation
+Singleton - singleton pattern implementation
+Forwardable - delegation functionality
+Observable - observer pattern implementation
+Delegator - delegation pattern implementation
+
+# Popular Ruby Gems
+rails - full-stack web application framework
+sinatra - lightweight web application library
+rack - modular web server interface
+puma - multi-threaded web server
+unicorn - HTTP server for Ruby
+thin - simple and fast web server
+webrick - HTTP server toolkit
+activerecord - object-relational mapping
+sequel - database toolkit
+mongoid - MongoDB object document mapper
+redis - Redis client library
+sidekiq - background job processing
+resque - Redis-backed background jobs
+delayed_job - database-backed asynchronous priority queue
+whenever - cron job scheduler
+clockwork - scheduler for recurring events
+rufus-scheduler - job scheduler
+devise - authentication solution
+omniauth - authentication framework
+pundit - authorization library
+cancancan - authorization library
+rolify - roles library
+bcrypt - password hashing
+jwt - JSON Web Token implementation
+oauth2 - OAuth 2.0 client
+doorkeeper - OAuth 2.0 provider
+rspec - behavior-driven development framework
+minitest - complete testing suite
+factory_bot - test data generation
+faker - fake data generation
+vcr - HTTP interaction recording
+webmock - HTTP request stubbing
+capybara - web application testing
+selenium-webdriver - browser automation
+watir - web application testing
+nokogiri - HTML and XML parser
+mechanize - web interaction library
+httparty - HTTP client library
+faraday - HTTP client abstraction
+rest-client - HTTP and REST client
+typhoeus - HTTP client with libcurl
+curb - Ruby bindings for libcurl
+pry - runtime developer console
+byebug - debugger
+better_errors - error page replacement
+binding_of_caller - retrieve bindings of calling methods
+awesome_print - pretty print Ruby objects
+hirb - view framework for console applications
+table_print - table printing for objects
+colorize - string colorization
+term-ansicolor - ANSI color control
+terminal-table - ASCII table generation
+tty - terminal applications toolkit
+thor - toolkit for building command-line interfaces
+gli - command-line interface framework
+commander - command-line interface library
+optparse - command-line option analysis
+slop - option parser and command framework
+image_processing - image processing functionality
+mini_magick - ImageMagick wrapper
+paperclip - file attachment management
+carrierwave - file upload solution
+shrine - file attachment toolkit
+aws-sdk - Amazon Web Services SDK
+fog - cloud services library
+geocoder - geocoding library
+kaminari - pagination library
+will_paginate - pagination library
+friendly_id - slugging and permalink solution
+state_machines - state machine implementation
+aasm - state machine library
+paranoia - soft delete functionality
+acts_as_paranoid - soft delete for ActiveRecord
+ransack - search functionality
+elasticsearch-rails - Elasticsearch integration
+sunspot - Solr search library
+thinking-sphinx - Sphinx search integration
+pg_search - PostgreSQL full-text search
+searchkick - intelligent search functionality
+chronic - natural language date parser
+timecop - time travel testing
+ice_cube - recurring event library
+business_time - business hours calculations
+holidays - holiday calculations
+money - money handling library
+monetize - money parsing library
+stripe - Stripe payment processing
+braintree - Braintree payment processing
+paypal-sdk - PayPal SDK
+prawn - PDF generation
+wicked_pdf - PDF generation from HTML
+htmltoimage - HTML to image conversion
+gruff - graph generation
+chartkick - chart generation
+lazy_high_charts - chart generation
+grape - API framework
+grape-entity - API entity representation
+jbuilder - JSON template engine
+rabl - JSON and XML templates
+active_model_serializers - JSON serialization
+fast_jsonapi - fast JSON serialization
+oj - fast JSON parser
+yajl-ruby - JSON parser
+multi_json - JSON library abstraction
+dry-rb - functional programming toolkit
+hanami - web framework
+rom-rb - data mapping toolkit
+eventmachine - event-driven I/O
+celluloid - actor-based concurrent objects
+concurrent-ruby - concurrency tools
+async - asynchronous programming
+fiber-local - fiber-local variables
+mail - mail library
+pony - lightweight mailer
+premailer - CSS inlining for emails
+roadie - CSS inlining for email
+letter_opener - email previewing
+mailcatcher - email testing tool

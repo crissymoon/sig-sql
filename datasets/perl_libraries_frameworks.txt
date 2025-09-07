@@ -1,0 +1,239 @@
+# Perl Modules and Libraries (CPAN)
+
+# Core Modules (Standard Library)
+strict - compile-time checking
+warnings - control warnings
+feature - enable new language features
+utf8 - UTF-8 pragma
+constant - declare constants
+vars - predeclare global variable names
+lib - manipulate @INC at compile time
+base - establish ISA relationship with base classes
+parent - establish ISA relationship with base classes
+Exporter - default import method for modules
+AutoLoader - load subroutines only on demand
+SelfLoader - load functions only on demand
+Carp - alternative warn and die functions
+Data::Dumper - stringified perl data structures
+Scalar::Util - selection of general-utility scalar subroutines
+List::Util - selection of general-utility list subroutines
+Hash::Util - selection of general-utility hash subroutines
+Storable - persistence for Perl data structures
+Clone - recursively copy Perl datatypes
+File::Basename - parse file paths into directory, filename and suffix
+File::Path - create or remove directory trees
+File::Spec - portably perform operations on file names
+File::Find - traverse a directory tree
+File::Copy - copy files or filehandles
+File::Temp - return name and handle of a temporary file safely
+Cwd - get pathname of current working directory
+Getopt::Long - extended processing of command line options
+Getopt::Std - process single-character switches with switch clustering
+Pod::Usage - extract usage information from embedded pod docs
+Time::Local - efficiently compute time from local and GMT time
+Time::HiRes - high resolution alarm, sleep, gettimeofday, interval timers
+POSIX - interface to IEEE Std 1003.1
+Fcntl - load the C Fcntl.h defines
+Socket - load the C socket.h defines and structure manipulators
+IO::Handle - supply object methods for I/O handles
+IO::File - supply object methods for filehandles
+IO::Dir - supply object methods for directory handles
+IO::Socket - object interface to socket communications
+IO::Select - OO interface to the select system call
+Encode - character encodings in Perl
+Digest::MD5 - perl interface to the MD5 algorithm
+Digest::SHA - perl extension for SHA-1/224/256/384/512
+MIME::Base64 - encoding and decoding of base64 strings
+URI - uniform resource identifiers (absolute and relative)
+LWP::Simple - simple procedural interface to LWP
+LWP::UserAgent - web user agent class
+HTTP::Request - HTTP style request message
+HTTP::Response - HTTP style response message
+Net::FTP - FTP client class
+Net::SMTP - simple mail transfer protocol client
+Net::POP3 - post office protocol 3 client class
+Mail::Send - simple electronic mail interface
+MIME::Lite - low-calorie MIME generator
+Text::ParseWords - parse text into an array of tokens or array of arrays
+Text::Wrap - line wrapping to form simple paragraphs
+Text::Tabs - expand and unexpand tabs like the unix expand and unexpand
+Term::ANSIColor - color screen output using ANSI escape sequences
+Term::ReadLine - perl interface to various readline packages
+Benchmark - benchmark running times of Perl code
+Config - access Perl configuration information
+English - use nice English (or awk) names for ugly punctuation variables
+FindBin - locate directory of original perl script
+Symbol - manipulate Perl symbols and their names
+Tie::Hash - base class definitions for tied hashes
+Tie::Array - base class definitions for tied arrays
+Tie::Scalar - base class definitions for tied scalars
+UNIVERSAL - base class for ALL classes (blessed references)
+
+# Popular CPAN Modules
+Moose - complete object system for Perl 5
+Mouse - object system for Perl 5
+Moo - minimalist object orientation (with Moose compatibility)
+Class::Accessor - automated accessor generation
+Class::Std - support for creating standard "inside-out" classes
+Class::Base - useful base class for deriving other modules
+Object::Tiny - class builder for minimalist classes
+Role::Tiny - roles, like a nouvelle cuisine portion size slice of Moose
+Try::Tiny - minimal try/catch with proper preservation of $@
+Exception::Class - module that allows you to declare real exception classes
+Error - error/exception handling in an OO-ish way
+Throwable - role for classes that can be thrown
+autodie - replace functions with ones that succeed or die with lexical scope
+Modern::Perl - enable all of the features of Modern Perl with one import
+perl5i - fix as much of Perl 5 as possible in one pragma
+common::sense - save a tree AND a kitten, use strict/warnings more efficiently
+namespace::clean - keep imports out of your namespace
+namespace::autoclean - keep imports out of your namespace
+Method::Signatures - method and function declarations with signatures and no source filter
+Function::Parameters - subroutine signatures with no source filter
+Kavorka - function signatures for Perl
+signatures - subroutine signatures with no source filter (Perl 5.20+)
+
+# Web Development
+Catalyst - elegant MVC web framework
+Mojolicious - real-time web framework
+Dancer2 - lightweight web application framework
+Plack - superglue between Perl web frameworks and servers
+PSGI - Perl web server gateway interface specification
+CGI - handle Common Gateway Interface requests and responses
+CGI::Application - framework for building reusable web-applications
+Web::Simple - quick and easy way to build simple web applications
+Web::Machine - port of Webmachine to Perl
+Kelp - light-weight web framework
+Mason - high-performance templating system
+Template::Toolkit - comprehensive template processing system
+HTML::Template - Perl module to use HTML templates
+Text::Xslate - scalable template engine
+Xslate - fast template engine
+
+# Database
+DBI - database independent interface for Perl
+DBD::MySQL - MySQL driver for DBI
+DBD::Pg - PostgreSQL driver for DBI
+DBD::SQLite - SQLite driver for DBI
+DBD::Oracle - Oracle driver for DBI
+DBIx::Class - extensible ORM for Perl
+Rose::DB::Object - extensible object-relational mapper
+Class::DBI - simple database abstraction
+SQL::Abstract - generate SQL from Perl data structures
+DBIx::Simple - very simple DBI interface
+DBIx::Connector - fast safe DBI connection and transaction management
+DBIx::Migration - seamless database schema up- and downgrades
+Redis - Perl binding for Redis database
+MongoDB - official MongoDB driver
+Memcached::Fast - Perl client for memcached
+Cache::Memcached - client library for memcached
+Cache::FastMmap - uses an mmap'ed file to act as a shared memory interprocess cache
+
+# Testing
+Test::More - yet another framework for writing test scripts
+Test::Simple - basic utilities for writing tests
+Test::Exception - test exception-based code
+Test::Warn - perl extension to test methods that warn
+Test::Deep - extremely flexible deep comparison
+Test::Class - easily create test classes in an xUnit style
+Test::Mock::Guard - simple mock test library using RAII
+Test::MockObject - perl extension for emulating troublesome interfaces
+Test::MockModule - override subroutines in a module for unit testing
+Test::LongString - tests strings for equality with more helpful failures
+Test::Most - most commonly needed test functions and features
+Test::Fatal - incredibly simple helpers for testing code with exceptions
+Test::WWW::Mechanize - testing-specific WWW::Mechanize subclass
+Test::JSON - test JSON data
+Test::XML - compare XML semantically
+Test::Database - database handles ready for testing
+Devel::Cover - code coverage metrics for Perl
+Test::Pod - check for POD errors in files
+Test::Pod::Coverage - check for pod coverage in your distribution
+
+# JSON and Data Serialization
+JSON - JSON (JavaScript Object Notation) encoder/decoder
+JSON::XS - JSON serialising/deserialising done correctly and fast
+JSON::PP - JSON::XS compatible pure-Perl module
+JSON::MaybeXS - use JSON::XS with a fallback to JSON::PP
+Cpanel::JSON::XS - cPanel fork of JSON::XS fast and correct JSON codec
+YAML - YAML Ain't Markup Language
+YAML::Tiny - read/write YAML files with as little code as possible
+YAML::XS - Perl YAML Serialization using XS and libyaml
+XML::LibXML - perl binding for libxml2
+XML::Simple - easy API to maintain XML
+XML::Twig - tree interface to XML documents allowing processing chunk by chunk
+XML::Parser - perl module for parsing XML documents
+Data::MessagePack - MessagePack serialising/deserialising
+Sereal - fast serialisation format for Perl (encoder)
+Storable - persistence for Perl data structures
+
+# Date and Time
+DateTime - date and time object for Perl
+DateTime::Format::Strptime - parse and format strp and strf time patterns
+DateTime::Format::DateParse - parses Date::Parse compatible formats
+Time::Piece - object oriented time objects
+Date::Calc - Gregorian calendar date calculations
+Date::Manip - date manipulation routines
+Time::HiRes - high resolution alarm sleep gettimeofday interval timers
+Time::Local - efficiently compute time from local and GMT time
+
+# Networking and HTTP
+LWP::UserAgent - web user agent class
+HTTP::Tiny - small simple consistent HTTP/1.1 client
+Mojo::UserAgent - non-blocking I/O HTTP and WebSocket user agent
+WWW::Mechanize - handy web browsing in a Perl object
+HTTP::Request::Common - construct common HTTP::Request objects
+URI::Escape - percent-encode and percent-decode unsafe characters
+Net::HTTP - low-level HTTP connection (client)
+AnyEvent::HTTP - simple but non-blocking HTTP/HTTPS client
+Future::HTTP - HTTP client using Future
+IO::Socket::SSL - SSL sockets with IO::Socket interface
+Net::SSLeay - Perl extension for using OpenSSL
+LWP::Protocol::https - provide https support for LWP::UserAgent
+
+# Logging
+Log::Log4perl - log4j implementation for Perl
+Log::Dispatch - dispatches messages to one or more outputs
+Log::Any - bringing loggers and listeners together
+Log::Contextual - simple logging interface with a contextual log
+Mojo::Log - simple logger
+Log::Fast - fast and flexible logger
+
+# Command Line
+Getopt::Long::Descriptive - Getopt::Long but with usage text
+App::Cmd - write command line apps with less suffering
+MooseX::Getopt - Moose role for processing command line options
+IO::Prompter - prompt for and read terminal input
+Term::ProgressBar - provide a progress meter on a standard terminal
+Term::UI - user interfaces via Term::ReadLine made easy
+
+# File Processing
+Path::Tiny - file path utility
+File::Slurp - simple and efficient reading/writing/modifying of complete files
+File::Slurper - simple efficient file slurping
+IO::All - io::all to Larry Wall
+Archive::Zip - provide an interface to ZIP archive files
+Archive::Tar - module for manipulations of tar archives
+Compress::Zlib - interface to zlib compression library
+IO::Compress::Gzip - write RFC 1952 files/buffers
+Text::CSV - comma-separated values manipulator (using XS or PurePerl)
+Spreadsheet::ParseExcel - read information from an Excel file
+Excel::Writer::XLSX - create a new file in the Excel 2007+ XLSX format
+
+# Security and Cryptography
+Crypt::CBC - encrypt Data with Cipher Block Chaining Mode
+Crypt::Rijndael - crypt::cbc compliant Rijndael encryption module
+Digest::HMAC - keyed-hashing for message authentication
+Crypt::Random - cryptographically secure random number generator
+Crypt::OpenSSL::RSA - RSA encoding and decoding using OpenSSL
+Crypt::JWT - JSON Web Token
+Auth::GoogleAuth - Google Authenticator
+Authen::SASL - SASL authentication framework
+
+# Email
+Email::Simple - simple parsing of RFC2822 message format and headers
+Email::MIME - easy MIME message handling
+Email::Sender - library for sending email
+Email::Valid - check validity of internet email addresses
+Mail::IMAPClient - IMAP client module
+Net::SMTP::SSL - SSL support for Net::SMTP
